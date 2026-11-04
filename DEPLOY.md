@@ -1,5 +1,11 @@
 # 部署到 GitHub Pages（照着做，大约 10 分钟）
 
+## Netlify 部署
+
+本站也可直接从 GitHub 的 `main` 分支发布到 Netlify。仓库中的 `netlify.toml` 已将发布目录设为仓库根目录；这是纯静态网站，无需构建命令。
+
+如果 Netlify 页面落后于 GitHub，请在 Netlify 的 Deploys 页面核对生产部署的提交编号是否与 GitHub `main` 最新提交一致。若不一致，使用 `Trigger deploy` → `Deploy site` 发布最新提交；部署成功后再刷新页面。
+
 前提：你的电脑上没有 git，所以我们**全程用 GitHub 网页操作**，不需要装任何东西。
 
 > 压缩包 `shuke-betafly.zip`（4.5 MB，48 个文件）里**没有** `images/pool/` 那批源图——
