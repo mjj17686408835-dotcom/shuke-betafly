@@ -33,5 +33,6 @@ jobs:
             echo "今日机场没有变化，跳过提交"
           else
             git commit -m "chore: 更新今日机场 $(TZ=Asia/Shanghai date +%F)"
+            git pull --rebase --autostash origin main
             git push
           fi

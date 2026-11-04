@@ -33,5 +33,6 @@ jobs:
             echo "天气没有变化，跳过提交"
           else
             git commit -m "chore: 更新机场天气 $(TZ=Asia/Shanghai date +%F)"
+            git pull --rebase --autostash origin main
             git push
           fi
