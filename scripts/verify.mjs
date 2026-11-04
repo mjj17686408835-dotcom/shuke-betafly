@@ -77,7 +77,7 @@ globalThis.__boot();
 const checks = [
   ["首屏标题", "#hero-title", ["hero-icao"]],
   ["首屏浮卡", "#hero-card", ["hc-facts", "hc-approach"]],
-  ["首屏署名", "#hero-credit", ["pexels.com"]],
+  ["首屏署名", "#hero-credit", ["Photo"]],
   ["背景层", "#bg-layer", ["<img"]],
   ["机场网格", "#airport-grid", ["airport-card", "ac-icao", "ac-go"]],
   ["机队卡", "#fleet", ["class=\"photo\"", "A350", "MD-11F"]],

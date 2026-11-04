@@ -1,30 +1,16 @@
-/* 首屏背景图清单（2560px 宽，来自 Pexels，可免费商用）。
-   想换成自己的照片：把图放进 images/，在这里加一行就行。
-   credit / link 会显示在首屏左下角。 */
+/* 首屏背景图清单。
+   这里是「背景墙」——玩家自己拍的 MSFS 截图，会跟每天推荐的三个机场配图交替循环。
+   想加自己的图：放进 images/hero/，在下面加一行就行。 */
 const BACKGROUNDS = [
-  {
-    src: "images/pexels-32272750.jpg",
-    credit: "Pexels",
-    link: "https://www.pexels.com/photo/32272750/"
-  },
-  {
-    src: "images/pexels-38203257.jpg",
-    credit: "Pexels",
-    link: "https://www.pexels.com/photo/38203257/"
-  },
-  {
-    src: "images/pexels-38231890.jpg",
-    credit: "Pexels",
-    link: "https://www.pexels.com/photo/38231890/"
-  },
-  {
-    src: "images/pexels-34050152.jpg",
-    credit: "Pexels",
-    link: "https://www.pexels.com/photo/34050152/"
-  },
-  {
-    src: "images/pexels-5333143.jpg",
-    credit: "Eduardo Cano Photo Co. / Pexels",
-    link: "https://www.pexels.com/photo/5333143/"
-  }
+  { src: "images/hero/hero-01.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-02.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-03.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-04.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-05.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-06.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-07.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-08.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-09.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-10.jpg", credit: "玩家截图" },
+  { src: "images/hero/hero-11.jpg", credit: "玩家截图" }
 ];

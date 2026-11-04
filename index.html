@@ -27,12 +27,18 @@
     <a href="#routes">航线</a>
     <a href="#scenery">地景</a>
   </nav>
-  <div class="nav-search" id="nav-search">
-    <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path>
-    </svg>
-    <input id="nav-search-input" type="search" placeholder="搜机场，直接生成 SimBrief 计划" autocomplete="off" spellcheck="false">
-  </div>
+  <form class="nav-search" id="nav-search" autocomplete="off">
+    <div class="ns-field">
+      <span class="ns-tag">起</span>
+      <input id="ns-from" type="text" placeholder="起飞机场" spellcheck="false" aria-label="起飞机场">
+    </div>
+    <button class="ns-swap" id="ns-swap" type="button" title="对调起降" aria-label="对调起降机场">⇄</button>
+    <div class="ns-field">
+      <span class="ns-tag">降</span>
+      <input id="ns-to" type="text" placeholder="降落机场" spellcheck="false" aria-label="降落机场">
+    </div>
+    <button class="ns-go" type="submit" title="生成 SimBrief 计划" aria-label="生成 SimBrief 计划">→</button>
+  </form>
   <button class="pill" id="shuffle">换一座 ↻</button>
   <div class="search-panel" id="search-panel" hidden></div>
 </header>

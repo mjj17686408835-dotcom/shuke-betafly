@@ -163,10 +163,26 @@
   /* ---------- 背景轮播 ---------- */
   let bgTimer = null;
 
-  /* 背景用本地高清图（js/backgrounds.js），没有才退回机型照片 */
+  /* 背景墙（js/backgrounds.js 里的玩家截图）+ 今天三个机场的配图，交替轮播 */
   function backgroundPool() {
     const local = typeof BACKGROUNDS !== "undefined" && Array.isArray(BACKGROUNDS) ? BACKGROUNDS : [];
-    if (local.length) return local;
+    const dayPicks = pickList() || [];
+    const pickShots = dayPicks
+      .filter((p) => p.photo)
+      .map((p) => ({ src: p.photo, credit: "今日机场", link: "" }));
+    if (local.length) {
+      if (!pickShots.length) return local;
+      /* 把三张今日配图均匀插进背景墙，别扎堆堆在尾巴上 */
+      const gap = Math.max(2, Math.round(local.length / pickShots.length));
+      const out = [];
+      let pi = 0;
+      local.forEach((item, i) => {
+        out.push(item);
+        if (pi < pickShots.length && (i + 1) % gap === 0) out.push(pickShots[pi++]);
+      });
+      while (pi < pickShots.length) out.push(pickShots[pi++]);
+      return out;
+    }
     return photos.map((p) => ({
       src: p.src,
       credit: `${p.photographer || "unknown"} / planespotters.net`,
@@ -180,8 +196,9 @@
     const pool = backgroundPool();
     if (!pool.length) return;
 
-    /* 从今天的位置开始轮，每天第一张不一样 */
-    const start = ((dayIndex() % pool.length) + pool.length) % pool.length;
+    /* 从今天的位置开始轮，每天第一张不一样；但别让首帧就落在机场配图上 */
+    let start = ((dayIndex() % pool.length) + pool.length) % pool.length;
+    if (pool[start] && pool[start].credit === "今日机场") start = (start + 1) % pool.length;
     const list = pool.map((_, i) => pool[(start + i) % pool.length]);
 
     layer.innerHTML = list
@@ -196,9 +213,14 @@
       const p = list[i];
       const credit = $("#hero-credit");
       if (credit && p) {
-        credit.innerHTML = `Photo · ${esc(p.credit || "unknown")} / <a href="${esc(
-          p.link || "https://www.pexels.com"
-        )}" target="_blank" rel="noopener">${esc(p.link && p.link.includes("planespotters") ? "planespotters.net" : "pexels.com")}</a>`;
+        if (p.link) {
+          const label = p.link.includes("planespotters") ? "planespotters.net" : "pexels.com";
+          credit.innerHTML = `Photo · ${esc(p.credit || "unknown")} / <a href="${esc(
+            p.link
+          )}" target="_blank" rel="noopener">${esc(label)}</a>`;
+        } else {
+          credit.innerHTML = `Photo · ${esc(p.credit || "unknown")}`;
+        }
       }
     };
 
@@ -268,7 +290,8 @@
     };
   }
 
-  /* 换背景：把当前机场的图铺上去，压过原来的轮播图 */
+  /* 换背景：点某个方案时，把这座机场的图铺上去（看 12 秒后交还给背景墙） */
+  let pickPhotoTimer = null;
   function setHeroPhoto(url) {
     const layer = document.querySelector(".bg");
     if (!layer || !url || typeof document.createElement !== "function") return;
@@ -281,6 +304,10 @@
     if (img.getAttribute("src") !== url) img.src = url;
     img.classList.add("is-on");
     layer.querySelectorAll("img:not(.pick)").forEach((el) => el.classList.remove("is-on"));
+    if (pickPhotoTimer) clearTimeout(pickPhotoTimer);
+    pickPhotoTimer = setTimeout(() => {
+      img.classList.remove("is-on");
+    }, 12000);
   }
 
   function renderToday() {
@@ -353,11 +380,11 @@
         btn.addEventListener("click", () => {
           activePick = Number(btn.dataset.pick);
           renderToday();
+          const ps = pickList();
+          if (ps && ps[activePick]) setHeroPhoto(ps[activePick].photo);
         });
       });
     }
-
-    setHeroPhoto(ap.photo);
 
     /* 今日航线：从该机场出发的优先，其次是到达的，不够 3 条就补几条顺路的 */
     const out = ROUTES.filter((r) => r.from[0] === ap.icao);
@@ -698,11 +725,13 @@
         if (dayPicks) {
           /* 三个方案之间循环：换机场、换背景、换天气、换地景链接 */
           activePick = (activePick + 1) % dayPicks.length;
+          renderToday();
+          if (dayPicks[activePick]) setHeroPhoto(dayPicks[activePick].photo);
         } else {
           lockedIcao = null;
           shuffleOffset += 1;
+          renderToday();
         }
-        renderToday();
         renderScenery();
         if (typeof window.scrollTo === "function") window.scrollTo({ top: 0, behavior: "smooth" });
       });
@@ -877,38 +906,46 @@
   }
 
   function initNavSearch() {
-    const input = $("#nav-search-input");
+    const form = $("#nav-search");
+    const from = $("#ns-from");
+    const to = $("#ns-to");
+    const swap = $("#ns-swap");
     const panel = $("#search-panel");
-    if (!input || !panel) return;
+    if (!form || !from || !to || !panel) return;
 
     let items = [];
-    let active = -1;
+    let active = 0;
+    let target = to; // 面板当前在给哪个框补全
     let timer = null;
+
+    const todayIcao = () => {
+      const ps = pickList();
+      return ps ? ps[activePick % ps.length].icao : todayAirport().icao;
+    };
+
+    /* 把输入框里的文字解释成一座机场 */
+    const resolve = (text) => {
+      const t = (text || "").trim();
+      if (!t) return null;
+      const hit = searchAirports(t, 3);
+      return hit[0] || null;
+    };
 
     const close = () => {
       panel.hidden = true;
-      active = -1;
+      active = 0;
     };
 
     const paint = (list) => {
       items = list;
-      active = -1;
-      const ap = todayAirport();
-      const ac = todayAircraftId();
-
+      active = 0;
       if (!list.length) {
-        panel.innerHTML =
-          input.value.trim().length < 2
-            ? `<div class="sp-empty">输入 ICAO、IATA、城市或机场名，比如 <b>ZULS</b> / <b>拉萨</b> / <b>Innsbruck</b>。</div>`
-            : `<div class="sp-empty">没找到匹配的机场，试试 4 位 ICAO 代码。</div>`;
+        panel.innerHTML = `<div class="sp-empty">没找到匹配的机场，试试 4 位 ICAO 代码，比如 <b>ZBAA</b>。</div>`;
         panel.hidden = false;
         return;
       }
-
       panel.innerHTML =
-        `<div class="sp-note">以今日机场 ${esc(ap.icao)} 为出发，机型 ${esc(
-          aircraftName(ac)
-        )} · 点结果直接开 SimBrief</div>` +
+        `<div class="sp-note">选一座填进「${target === from ? "起飞" : "降落"}」 · 两边都填好后点 → 生成 SimBrief 计划</div>` +
         list
           .map(
             (a, i) => `
@@ -917,40 +954,51 @@
             <span class="sp-name">${esc(a.name)}<small>${esc(
               [a.city, a.country].filter(Boolean).join(" · ")
             )}</small></span>
-            <span class="sp-act">SimBrief →</span>
+            <span class="sp-act">填入 →</span>
           </div>`
           )
           .join("");
       panel.hidden = false;
-      active = 0;
     };
 
-    const open = (icao) => {
-      const ap = todayAirport();
-      const dest = icao === ap.icao ? ap.icao : icao;
-      const url = simBriefUrl(ap.icao, dest, todayAircraftId());
+    const update = (input) => {
+      target = input;
+      paint(searchAirports(input.value, 8));
+    };
+
+    const choose = (a) => {
+      target.value = a.icao;
+      close();
+      /* 起飞刚填好、降落还空着，自动跳到降落框 */
+      if (target === from && !to.value.trim()) setTimeout(() => to.focus(), 40);
+    };
+
+    const go = () => {
+      const o = resolve(from.value);
+      const d = resolve(to.value);
+      if (!o) {
+        close();
+        from.focus();
+        return;
+      }
+      if (!d) {
+        close();
+        to.focus();
+        return;
+      }
+      const url = simBriefUrl(o.icao, d.icao, todayAircraftId());
       if (typeof window.open === "function") window.open(url, "_blank", "noopener");
       close();
     };
 
-    const update = () => {
-      paint(searchAirports(input.value));
-    };
-
-    input.addEventListener("input", () => {
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(update, 120);
-    });
-
-    input.addEventListener("focus", () => {
-      if (input.value.trim().length >= 1) update();
-    });
-
-    input.addEventListener("keydown", (e) => {
-      if (panel.hidden) {
-        if (e.key === "Enter") update();
+    const onKey = (input) => (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (!panel.hidden && items[active]) choose(items[active]);
+        else go();
         return;
       }
+      if (panel.hidden) return;
       if (e.key === "ArrowDown" || e.key === "ArrowUp") {
         e.preventDefault();
         if (!items.length) return;
@@ -958,38 +1006,63 @@
         [...panel.querySelectorAll(".sp-item")].forEach((el, i) =>
           el.classList.toggle("is-active", i === active)
         );
-      } else if (e.key === "Enter") {
-        e.preventDefault();
-        const pick = items[active >= 0 ? active : 0];
-        if (pick) open(pick.icao);
       } else if (e.key === "Escape") {
         close();
         input.blur();
       }
+    };
+
+    [from, to].forEach((input) => {
+      input.addEventListener("input", () => {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => update(input), 120);
+      });
+      input.addEventListener("focus", () => {
+        if (input.value.trim().length >= 1) update(input);
+      });
+      input.addEventListener("keydown", onKey(input));
     });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      go();
+    });
+
+    if (swap) {
+      swap.addEventListener("click", () => {
+        const a = from.value;
+        from.value = to.value;
+        to.value = a;
+        close();
+      });
+    }
 
     panel.addEventListener("click", (e) => {
       const row = e.target.closest(".sp-item");
-      if (row) open(row.dataset.icao);
+      if (!row) return;
+      const ap = items.find((x) => x.icao === row.dataset.icao);
+      if (ap) choose(ap);
     });
 
     const onDocClick = (e) => {
-      if (!panel.hidden && !panel.contains(e.target) && !input.closest(".nav-search").contains(e.target)) {
-        close();
-      }
+      if (!panel.hidden && !panel.contains(e.target) && !form.contains(e.target)) close();
     };
     if (typeof document.addEventListener === "function") document.addEventListener("click", onDocClick);
 
-    /* 快捷键 "/" 聚焦搜索 */
+    /* 快捷键 "/" 直接跳到降落框 */
     if (typeof document.addEventListener === "function") {
       document.addEventListener("keydown", (e) => {
-        if (e.key === "/" && document.activeElement !== input) {
+        if (e.key === "/" && document.activeElement !== from && document.activeElement !== to) {
           e.preventDefault();
-          input.focus();
+          to.focus();
         }
       });
     }
+
+    /* 默认：起飞 = 今日机场 */
+    if (!from.value) from.value = todayIcao();
   }
+
 
   /* ---------- 启动 ---------- */
   function boot() {

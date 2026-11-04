@@ -104,15 +104,85 @@ h1, h2, h3, p, dl, dd, dt { margin: 0; }
 .nav-search {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin-left: 4px;
-  width: clamp(180px, 24vw, 320px);
-  padding: 8px 14px;
+  width: clamp(260px, 30vw, 400px);
+  padding: 5px 6px 5px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--line);
   backdrop-filter: blur(14px);
   transition: background 0.25s, border-color 0.25s;
+}
+
+/* 起 / 降 两个输入框 */
+.ns-field {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.ns-tag {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(238, 245, 244, 0.5);
+  flex: none;
+}
+
+.ns-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 5px 0;
+  border: 0;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  outline: none;
+}
+
+.ns-field input::placeholder {
+  color: rgba(238, 245, 244, 0.4);
+}
+
+.ns-swap,
+.ns-go {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.ns-swap {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+}
+
+.ns-swap:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--text);
+  transform: rotate(180deg);
+}
+
+.ns-go {
+  background: var(--text);
+  color: #08161a;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ns-go:hover {
+  background: var(--accent);
 }
 
 .nav-search:focus-within {
