@@ -31,6 +31,14 @@
     return TODAY_AUTO;
   }
 
+  /* 英文名：优先数据里带的，其次从全量索引里找（用来在中文名下面配一行小字） */
+  function englishName(icao) {
+    if (typeof AIRPORT_INDEX === "undefined" || !Array.isArray(AIRPORT_INDEX)) return "";
+    const row = AIRPORT_INDEX.find((r) => r[0] === icao);
+    if (!row || !row[2]) return "";
+    return row[2].replace(/\s+International\s+Airport$/i, "").replace(/\s+Airport$/i, "");
+  }
+
   /* 某座机场的实况：优先用 METAR 快照（每天 8 点更新），
      首屏那座如果没有 METAR（比如拉萨 ZULS 不报），退回早上 6 点选机场时抓的天气 */
   function weatherOf(icao) {
@@ -39,13 +47,19 @@
       if (w) return w;
     }
     const auto = todayAuto();
-    if (auto && auto.icao === icao && auto.weather) {
-      const w = auto.weather;
+    let pick = null;
+    if (auto) {
+      if (Array.isArray(auto.picks)) pick = auto.picks.find((p) => p.icao === icao) || null;
+      if (!pick && auto.icao === icao && auto.weather) pick = auto;
+    }
+    if (pick && pick.weather) {
+      const w = pick.weather;
       return {
         temp: w.temp,
         wind: w.wind < 1 ? "静风" : `${Math.round(w.wind)} km/h`,
         vis: w.vis >= 1000 ? `${Math.round(w.vis / 1000)} km` : `${w.vis} m`,
         sky: w.text,
+        isDay: w.isDay,
         flt: "",
         from: "open-meteo",
       };
@@ -103,6 +117,9 @@
     奥地利: "AT", 葡萄牙: "PT", 希腊: "GR", 挪威: "NO", 瑞典: "SE", 芬兰: "FI",
     冰岛: "IS", 加拿大: "CA", 美国: "US", 墨西哥: "MX", 巴西: "BR", 阿根廷: "AR",
     澳大利亚: "AU", 新西兰: "NZ", 南非: "ZA", 埃及: "EG", 摩洛哥: "MA", 直布罗陀: "GI",
+    丹麦: "DK", 比利时: "BE", 立陶宛: "LT", 格陵兰: "GL", 埃塞俄比亚: "ET",
+    孟加拉国: "BD", 尼日利亚: "NG", 多哥: "TG", 南苏丹: "SS", 巴哈马: "BS",
+    智利: "CL", 乌拉圭: "UY", 萨尔瓦多: "SV", 波多黎各: "PR", 荷属圣马丁: "SX",
   };
 
   /* 精选机场的英文名/别名，让 "Courchevel" 也能搜到库尔舍维尔 */
@@ -260,19 +277,30 @@
   /* 把每日推荐的一条数据，转成首屏要用的一整份模型 */
   function pickModel(p) {
     const cur = AIRPORTS.find((a) => a.icao === p.icao);
-    if (cur) return Object.assign({}, cur, { role: p.role, photo: p.photo, weather: p.weather, __pick: p });
+    if (cur) {
+      return Object.assign({}, cur, { role: p.role, photo: p.photo, weather: p.weather, __pick: p });
+    }
     const cn = CN_KEYS(p.icao);
     const cities = CITY_CN_OF[p.icao];
-    const name = (p.name || "").replace(/\s+International\s+Airport$/i, "").replace(/\s+Airport$/i, "");
-    const roleNote = {
-      hub: `跑道 ${p.rwy} 米，导航设施齐全，适合当作一段长途的起点或终点。`,
-      challenge: `标高 ${p.elev} 米、跑道 ${p.rwy} 米，进场要多留余量，练手正合适。`,
-      scenic: `航线一路都是风景，适合把高度压低一点慢慢飞。`,
+    const nameEn = (p.name || "")
+      .replace(/\s+International\s+Airport$/i, "")
+      .replace(/\s+Airport$/i, "");
+    const nameZh = cn ? cn[0] : "";
+    const roleIntro = {
+      hub: `${nameZh || nameEn}是这一带的枢纽，跑道 ${p.rwy} 米，起降节奏从容。`,
+      challenge: `${nameZh || nameEn}标高 ${p.elev} 米、跑道 ${p.rwy} 米，是今天比较考验技术的一座。`,
+      scenic: `${nameZh || nameEn}的看点在地面上，低空绕一圈比飞航线更值。`,
+    };
+    const roleTip = {
+      hub: "跑道长、进近程序标准，适合练航线，也适合作为跨洋段的热身。",
+      challenge: "先看一遍进近图再上手，注意高标高带来的真空速偏大。",
+      scenic: "压低高度绕场最出片，注意避开限制空域和地形。",
     };
     const countryZh = Object.keys(COUNTRY_CN).find((k) => COUNTRY_CN[k] === p.country) || p.country;
     return {
       icao: p.icao,
-      name: cn ? cn[0] : name,
+      name: cn ? cn[0] : nameEn,
+      nameEn,
       city: cn ? cn[1] : cities && cities.length ? cities[0] : p.city || "",
       country: p.country || "",
       countryZh,
@@ -281,8 +309,8 @@
       runway: `${p.rwy} m`,
       best: "全年",
       difficulty: ROLE_LABEL[p.role] || "推荐",
-      why: `今天这里${p.weather ? p.weather.text : "天气不错"}、${p.weather ? p.weather.temp : "—"}°C，从这座机场起飞，全程都有事可做。`,
-      approach: roleNote[p.role] || roleNote.hub,
+      why: roleIntro[p.role] || roleIntro.hub,
+      approach: roleTip[p.role] || roleTip.hub,
       photo: p.photo,
       role: p.role,
       __lite: true,
@@ -326,8 +354,11 @@
       if (ap.region) meta.push(esc(ap.region));
       if (ap.countryZh || ap.country) meta.push(esc(ap.countryZh || ap.country));
       const isEn = /^[\x00-\x7F]+$/.test(ap.name || "");
+      const en = ap.nameEn || englishName(ap.icao);
       title.className = isEn ? "hero-title is-en" : "hero-title";
-      title.innerHTML = `<span class="hero-icao">${meta.join(" · ")}</span>${esc(ap.name)}`;
+      title.innerHTML =
+        `<span class="hero-icao">${meta.join(" · ")}</span>${esc(ap.name)}` +
+        (!isEn && en ? `<small class="hero-en">${esc(en)}</small>` : "");
     }
 
     const sub = $("#hero-sub");
@@ -341,6 +372,8 @@
         if (w.wind) bits.push(`风 ${esc(w.wind)}`);
         if (w.vis) bits.push(`能见 ${esc(w.vis)}`);
         if (w.qnh) bits.push(`QNH ${esc(w.qnh)}`);
+        if (w.isDay === false) bits.push("夜航");
+        else if (w.isDay === true) bits.push("白天");
         sub.innerHTML = `${esc(ap.why)}<span class="hero-wx">今日实况 · ${bits.join(" · ")}</span>`;
       } else {
         sub.textContent = ap.why;
@@ -846,7 +879,10 @@
     return `https://dispatch.simbrief.com/options/custom?${q.toString()}`;
   }
 
-  const CN_KEYS = (icao) => (typeof AIRPORT_CN !== "undefined" && AIRPORT_CN[icao]) || null;
+  const CN_KEYS = (icao) =>
+    (typeof AIRPORT_ZH !== "undefined" && AIRPORT_ZH[icao]) ||
+    (typeof AIRPORT_CN !== "undefined" && AIRPORT_CN[icao]) ||
+    null;
 
   function searchAirports(raw, limit = 8) {
     const q = raw.trim();

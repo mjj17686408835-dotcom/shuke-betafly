@@ -48,6 +48,7 @@ const noTimer = () => ({ unref() {} });
 
 const files = [
   "js/data.js",
+  "js/airports-zh.js",
   "js/airports-auto.js",
   "js/scenery-auto.js",
   "js/photos-auto.js",
