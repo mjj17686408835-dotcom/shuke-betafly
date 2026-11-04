@@ -694,8 +694,14 @@
     const shuffle = $("#shuffle");
     if (shuffle) {
       shuffle.addEventListener("click", () => {
-        lockedIcao = null;
-        shuffleOffset += 1;
+        const dayPicks = pickList();
+        if (dayPicks) {
+          /* 三个方案之间循环：换机场、换背景、换天气、换地景链接 */
+          activePick = (activePick + 1) % dayPicks.length;
+        } else {
+          lockedIcao = null;
+          shuffleOffset += 1;
+        }
         renderToday();
         renderScenery();
         if (typeof window.scrollTo === "function") window.scrollTo({ top: 0, behavior: "smooth" });
