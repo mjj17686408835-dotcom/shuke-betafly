@@ -10,6 +10,7 @@
   /* ---------- 每日轮换 ---------- */
   const EPOCH = Date.UTC(2026, 0, 1);
   let shuffleOffset = 0; // 「换一座」的偏移
+  let activePick = 0; // 今日三个方案里当前选中的那个
   let lockedIcao = null; // 点了某张机场卡片后锁定
 
   function dayIndex() {
@@ -225,8 +226,68 @@
   }
 
   /* ---------- 渲染：首屏 ---------- */
+  /* ---------- 今日三个方案 ---------- */
+  const ROLE_LABEL = { hub: "好飞", challenge: "挑战", scenic: "风景" };
+
+  function pickList() {
+    const t = todayAuto();
+    if (t && Array.isArray(t.picks) && t.picks.length) return t.picks;
+    return null;
+  }
+
+  /* 把每日推荐的一条数据，转成首屏要用的一整份模型 */
+  function pickModel(p) {
+    const cur = AIRPORTS.find((a) => a.icao === p.icao);
+    if (cur) return Object.assign({}, cur, { role: p.role, photo: p.photo, weather: p.weather, __pick: p });
+    const cn = CN_KEYS(p.icao);
+    const cities = CITY_CN_OF[p.icao];
+    const name = (p.name || "").replace(/\s+International\s+Airport$/i, "").replace(/\s+Airport$/i, "");
+    const roleNote = {
+      hub: `跑道 ${p.rwy} 米，导航设施齐全，适合当作一段长途的起点或终点。`,
+      challenge: `标高 ${p.elev} 米、跑道 ${p.rwy} 米，进场要多留余量，练手正合适。`,
+      scenic: `航线一路都是风景，适合把高度压低一点慢慢飞。`,
+    };
+    const countryZh = Object.keys(COUNTRY_CN).find((k) => COUNTRY_CN[k] === p.country) || p.country;
+    return {
+      icao: p.icao,
+      name: cn ? cn[0] : name,
+      city: cn ? cn[1] : cities && cities.length ? cities[0] : p.city || "",
+      country: p.country || "",
+      countryZh,
+      region: "",
+      elev: `${p.elev} m`,
+      runway: `${p.rwy} m`,
+      best: "全年",
+      difficulty: ROLE_LABEL[p.role] || "推荐",
+      why: `今天这里${p.weather ? p.weather.text : "天气不错"}、${p.weather ? p.weather.temp : "—"}°C，从这座机场起飞，全程都有事可做。`,
+      approach: roleNote[p.role] || roleNote.hub,
+      photo: p.photo,
+      role: p.role,
+      __lite: true,
+      __pick: p,
+    };
+  }
+
+  /* 换背景：把当前机场的图铺上去，压过原来的轮播图 */
+  function setHeroPhoto(url) {
+    const layer = document.querySelector(".bg");
+    if (!layer || !url || typeof document.createElement !== "function") return;
+    let img = layer.querySelector("img.pick");
+    if (!img) {
+      img = document.createElement("img");
+      img.className = "pick";
+      layer.appendChild(img);
+    }
+    if (img.getAttribute("src") !== url) img.src = url;
+    img.classList.add("is-on");
+    layer.querySelectorAll("img:not(.pick)").forEach((el) => el.classList.remove("is-on"));
+  }
+
   function renderToday() {
-    const ap = todayAirport();
+    const dayPicks = pickList();
+    const ap = dayPicks
+      ? pickModel(dayPicks[activePick % dayPicks.length])
+      : Object.assign({}, todayAirport(), { role: "hub" });
     const auto = todayAuto();
 
     const dateEl = $("#today-date");
@@ -234,9 +295,12 @@
 
     const title = $("#hero-title");
     if (title) {
-      title.innerHTML = `<span class="hero-icao">${esc(ap.icao)} · ${esc(ap.region)} / ${esc(ap.country)}</span>${esc(
-        ap.name
-      )}`;
+      const meta = [esc(ap.icao)];
+      if (ap.region) meta.push(esc(ap.region));
+      if (ap.countryZh || ap.country) meta.push(esc(ap.countryZh || ap.country));
+      const isEn = /^[\x00-\x7F]+$/.test(ap.name || "");
+      title.className = isEn ? "hero-title is-en" : "hero-title";
+      title.innerHTML = `<span class="hero-icao">${meta.join(" · ")}</span>${esc(ap.name)}`;
     }
 
     const sub = $("#hero-sub");
@@ -259,10 +323,19 @@
     const card = $("#hero-card");
     if (card) {
       const scenery = SCENERY.find((s) => s.airport === ap.icao);
+      const switcher = dayPicks
+        ? `<div class="hc-picks">${dayPicks
+            .map(
+              (p, i) =>
+                `<button class="hc-pick${i === activePick % dayPicks.length ? " is-active" : ""}" data-pick="${i}">` +
+                `<b>${esc(ROLE_LABEL[p.role] || "推荐")}</b><span>${esc(p.icao)}</span></button>`
+            )
+            .join("")}</div>`
+        : "";
       card.innerHTML = `
         <div class="hc-top">
           <span class="hc-icao">${esc(ap.icao)}</span>
-          <span class="hc-tag">${ap.difficulty}</span>
+          <span class="hc-tag">${esc(ap.difficulty)}</span>
         </div>
         <dl class="hc-facts">
           <div><dt>标高</dt><dd>${esc(ap.elev)}</dd></div>
@@ -274,8 +347,17 @@
               : "暂无收录"
           }</dd></div>
         </dl>
-        <p class="hc-approach">${esc(ap.approach)}</p>`;
+        ${ap.approach ? `<p class="hc-approach">${esc(ap.approach)}</p>` : ""}
+        ${switcher}`;
+      card.querySelectorAll(".hc-pick").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          activePick = Number(btn.dataset.pick);
+          renderToday();
+        });
+      });
     }
+
+    setHeroPhoto(ap.photo);
 
     /* 今日航线：从该机场出发的优先，其次是到达的，不够 3 条就补几条顺路的 */
     const out = ROUTES.filter((r) => r.from[0] === ap.icao);

@@ -359,6 +359,13 @@ h1, h2, h3, p, dl, dd, dt { margin: 0; }
   text-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
 }
 
+/* 英文机场名比中文长得多，缩一档免得折成三行 */
+.hero-title.is-en {
+  font-size: clamp(40px, 5.4vw, 68px);
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
 .hero-title .hero-icao {
   display: block;
   font-size: clamp(13px, 1.2vw, 15px);
@@ -474,6 +481,57 @@ h1, h2, h3, p, dl, dd, dt { margin: 0; }
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* 今日三个方案：好飞 / 挑战 / 风景 */
+.hc-picks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.hc-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 6px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.hc-pick b {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.hc-pick span {
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.hc-pick:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--text);
+}
+
+.hc-pick.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #06181a;
+}
+
+.hc-pick.is-active span {
+  opacity: 0.75;
 }
 
 .hero-credit {

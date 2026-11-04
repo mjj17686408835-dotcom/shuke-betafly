@@ -21,14 +21,23 @@ jobs:
         with:
           node-version: "20"
 
-      - name: 按天气挑今日机场
+      - name: 按天气挑今日三座
         run: node scripts/build-today.mjs
+
+      - name: 给三座配图（Wikimedia 优先，主题图兜底）
+        run: node scripts/build-picks-photos.mjs
+
+      - name: 清理 30 天前的配图
+        run: |
+          cd images/picks 2>/dev/null || exit 0
+          ls -1d 20* 2>/dev/null | sort | head -n -30 | xargs -r rm -rf
+          echo "保留最近 30 天：$(ls -1d 20* 2>/dev/null | wc -l) 个目录"
 
       - name: 提交
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add js/today-auto.js
+          git add js/today-auto.js images/picks
           if git diff --staged --quiet; then
             echo "今日机场没有变化，跳过提交"
           else
