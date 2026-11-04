@@ -361,9 +361,10 @@
         (!isEn && en ? `<small class="hero-en">${esc(en)}</small>` : "");
     }
 
+    const w = weatherOf(ap.icao);
+
     const sub = $("#hero-sub");
     if (sub) {
-      const w = weatherOf(ap.icao);
       if (w) {
         const bits = [];
         if (w.flt) bits.push(esc(w.flt));
@@ -407,6 +408,19 @@
               : "暂无收录"
           }</dd></div>
         </dl>
+        ${
+          w
+            ? `<div class="hc-wx">
+          ${w.flt ? `<span class="ac-flt flt-${esc(w.flt.toLowerCase())}">${esc(w.flt)}</span>` : ""}
+          <span>${esc(w.sky || "实况")}</span>
+          ${w.temp != null ? `<span>${esc(w.temp)}°C</span>` : ""}
+          ${w.wind ? `<span>风 ${esc(w.wind)}</span>` : ""}
+          ${w.vis ? `<span>能见 ${esc(w.vis)}</span>` : ""}
+          ${w.qnh ? `<span>QNH ${esc(w.qnh)}</span>` : ""}
+          ${w.isDay === false ? `<span>夜航</span>` : ""}
+        </div>`
+            : `<div class="hc-wx hc-wx--none">今日暂无实况观测</div>`
+        }
         ${ap.approach ? `<p class="hc-approach">${esc(ap.approach)}</p>` : ""}
         ${switcher}`;
       card.querySelectorAll(".hc-pick").forEach((btn) => {
