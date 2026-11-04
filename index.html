@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="舒克与贝塔：每天推荐一个最美机场和对应航线，覆盖 A350、MD-11F、A320、B777、B737-800，附带 MSFS 2024 地景推荐，可一键生成 SimBrief 飞行计划。">
+<title>舒克与贝塔 · 每天一座值得飞的机场</title>
+<link rel="preconnect" href="https://t.plnspttrs.net">
+<link rel="preconnect" href="https://images.pexels.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+
+<!-- 全屏背景：飞机照片轮播 -->
+<div class="bg" id="bg-layer" aria-hidden="true"></div>
+<div class="bg-scrim" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top">
+    <span class="logo-mark">🛩</span>
+    <span class="logo-text">舒克<em>与贝塔</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#airports">机场</a>
+    <a href="#fleet-section">机队</a>
+    <a href="#routes">航线</a>
+    <a href="#scenery">地景</a>
+  </nav>
+  <div class="nav-search" id="nav-search">
+    <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path>
+    </svg>
+    <input id="nav-search-input" type="search" placeholder="搜机场，直接生成 SimBrief 计划" autocomplete="off" spellcheck="false">
+  </div>
+  <button class="pill" id="shuffle">换一座 ↻</button>
+  <div class="search-panel" id="search-panel" hidden></div>
+</header>
+
+<main id="top">
+
+  <!-- ========== 首屏：今日机场 ========== -->
+  <section class="hero" id="today">
+    <div class="hero-body">
+      <p class="eyebrow"><span class="dot"></span><span id="today-date"></span><span class="sep">/</span>今日最美机场</p>
+      <h1 class="hero-title" id="hero-title">—</h1>
+      <p class="hero-sub" id="hero-sub">正在挑选今天的机场…</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#today-routes">看今天怎么飞 <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#airports">全部机场</a>
+      </div>
+    </div>
+
+    <aside class="hero-card" id="hero-card"></aside>
+
+    <p class="hero-credit" id="hero-credit"></p>
+  </section>
+
+  <!-- ========== 搜索条 ========== -->
+  <div class="searchwrap">
+    <div class="searchbar">
+      <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path>
+      </svg>
+      <input id="airport-search" type="search" placeholder="搜机场名、城市或 ICAO…" autocomplete="off">
+      <div class="chips" id="airport-chips"></div>
+      <button class="search-go" id="search-go" aria-label="查看机场">→</button>
+    </div>
+  </div>
+
+  <!-- ========== 机场卡片 ========== -->
+  <section class="section" id="airports">
+    <div class="sec-head">
+      <h2>下一站，飞哪儿？</h2>
+      <span class="sec-meta" id="airport-count"></span>
+    </div>
+    <p class="sec-sub">模拟飞行圈里公认值得专程飞一趟的机场 —— 跑道短、进近刁、地景好，点开看怎么落。首屏那座每天按各地天气重新挑，早上 6 点换一次。</p>
+    <div class="airport-grid" id="airport-grid"></div>
+  </section>
+
+  <!-- ========== 今日航线 ========== -->
+  <section class="section" id="today-routes">
+    <div class="sec-head">
+      <h2>今天的航线</h2>
+      <span class="sec-meta">从今日机场出发</span>
+    </div>
+    <p class="hint" id="today-route-note"></p>
+    <div class="route-list" id="today-routes-list"></div>
+  </section>
+
+  <!-- ========== 宣言 ========== -->
+  <section class="statement">
+    <h2>少一点计划，<br>多一点起飞。</h2>
+    <div class="stmt-right">
+      <p>机场、航线、机型、地景都替你理好了，剩下的只是推油门。</p>
+      <a class="btn btn-ghost" href="#routes">看全部航线 <span class="arr">→</span></a>
+    </div>
+  </section>
+
+  <!-- ========== 机队 ========== -->
+  <section class="section" id="fleet-section">
+    <div class="sec-head">
+      <h2>机队</h2>
+      <span class="sec-meta">五种机型，各有各的脾气</span>
+    </div>
+    <div class="fleet-grid" id="fleet"></div>
+  </section>
+
+  <!-- ========== 航线库 ========== -->
+  <section class="section" id="routes">
+    <div class="sec-head">
+      <h2>推荐航线 <span class="sec-meta" id="route-count"></span></h2>
+    </div>
+    <div class="chips" id="aircraft-chips"></div>
+    <div class="route-list" id="route-list"></div>
+    <div class="more-wrap">
+      <button class="btn btn-ghost" id="route-more" style="display:none"></button>
+    </div>
+  </section>
+
+  <!-- ========== 地景 ========== -->
+  <section class="section" id="scenery">
+    <div class="sec-head">
+      <h2>MSFS 2024 地景</h2>
+      <span class="sec-meta">索引自 SceneryAddons</span>
+    </div>
+    <p class="hint">链接跳转 SceneryAddons，文件与版权归原作者所有，本站只做索引。</p>
+    <div class="scenery-grid" id="scenery-list"></div>
+    <div class="more-wrap">
+      <button class="btn btn-ghost" id="scenery-more" style="display:none"></button>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-main">
+    <span class="logo-mark">🛩</span>
+    <div>
+      <p class="foot-title">舒克与贝塔</p>
+      <p class="foot-sub">为群友的每一次飞行找条好路线</p>
+    </div>
+  </div>
+  <p class="foot-credit">
+    背景照片来自 <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a>，
+    机型照片来自 <a href="https://www.planespotters.net" target="_blank" rel="noopener">planespotters.net</a>（版权归各摄影师所有）；
+    地景索引来自 <a href="https://sceneryaddons.org/category/msfs-airport/" target="_blank" rel="noopener">SceneryAddons</a>；
+    机场数据核对自 <a href="https://ourairports.com" target="_blank" rel="noopener">OurAirports</a>；
+    飞行计划由 <a href="https://dispatch.simbrief.com" target="_blank" rel="noopener">SimBrief</a> 生成。
+  </p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/airports-auto.js"></script>
+<script src="js/scenery-auto.js"></script>
+<script src="js/photos-auto.js"></script>
+<script src="js/backgrounds.js"></script>
+<script src="js/today-auto.js"></script>
+<script src="js/weather-auto.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

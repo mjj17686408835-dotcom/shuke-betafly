@@ -1,0 +1,45 @@
+name: update-airport-photos
+
+on:
+  schedule:
+    # UTC 周一 22:00 = 北京时间周二 06:00，每周换一轮机场卡片图
+    - cron: "0 22 * * 1"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "只抓某一座机场（填 ICAO，留空=全部）"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 抓取机场实景照（Wikimedia Commons）
+        run: |
+          if [ -n "${{ inputs.only }}" ]; then
+            node scripts/fetch-airport-photos.mjs --only=${{ inputs.only }}
+          else
+            node scripts/fetch-airport-photos.mjs
+          fi
+
+      - name: 提交变更
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/airports
+          if git diff --staged --quiet; then
+            echo "本次没有换到新图，跳过提交"
+          else
+            git commit -m "chore: refresh airport card photos"
+            git push
+          fi

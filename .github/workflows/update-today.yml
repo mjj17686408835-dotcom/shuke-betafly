@@ -1,0 +1,37 @@
+name: 每日机场
+
+# 北京时间每天 06:00 挑一座「今天天气最好、最值得飞」的机场。
+# GitHub 的 cron 用 UTC：22:00 UTC = 次日 06:00 北京。
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  today:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 按天气挑今日机场
+        run: node scripts/build-today.mjs
+
+      - name: 提交
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/today-auto.js
+          if git diff --staged --quiet; then
+            echo "今日机场没有变化，跳过提交"
+          else
+            git commit -m "chore: 更新今日机场 $(TZ=Asia/Shanghai date +%F)"
+            git push
+          fi
