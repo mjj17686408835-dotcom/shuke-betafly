@@ -1,15 +1,18 @@
-﻿/* 给当天的三个方案各配一张图：
+/* 给当天的三个方案各配一张图：
    1) 已有该机场实景图（images/airports/{ICAO}.jpg）→ 直接用
    2) 试着从 Wikimedia Commons 抓一张（宽度 ≥1600），抓到就下载到 images/picks/{ICAO}.jpg
    3) 都失败 → 按机场特征配主题图（mountain / island / desert / city / cold / airfield）
    最后把 photo 字段写回 js/today-auto.js，并打印结果。
 */
-import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const todayPath = join(root, "js/today-auto.js");
+
+/* Commons 只收宽度够的图，低于这个值的不要（会被放大成糊图） */
+const MIN_W = 1600;
 
 const code = readFileSync(todayPath, "utf8");
 const TODAY = new Function(`${code}\nreturn TODAY_AUTO;`)();
@@ -21,19 +24,39 @@ const picksDir = join(root, "images/picks", DAY);
 mkdirSync(picksDir, { recursive: true });
 const UA = "shuke-betafly/1.0 (+static site; MSFS group site)";
 
-/* 主题图：从 images/pool 里按机场特征挑，保证宽度 2560 */
+/* 主题图兜底：优先用仓库里一定有的玩家截图（images/hero），
+   以前指向 images/pool，但那 7.8 MB 源图没上传到仓库，CI 里不存在 → 会直接崩 */
+const heroDir = join(root, "images/hero");
+const HEROES = existsSync(heroDir)
+  ? readdirSync(heroDir)
+      .filter((f) => /\.jpe?g$/i.test(f))
+      .sort()
+      .map((f) => join(heroDir, f))
+  : [];
+
 const THEME = {
-  island: "images/pool/pexels-36553184.jpg",
-  coast: "images/pool/pexels-36553184.jpg",
-  mountain: "images/pool/pexels-35778731.jpg",
-  high: "images/pool/pexels-34770676.jpg",
-  desert: "images/pool/pexels-34637700.jpg",
-  canyon: "images/pool/pexels-34637700.jpg",
-  cold: "images/pool/pexels-33883156.jpg",
-  city: "images/pool/pexels-35130117.jpg",
-  hub: "images/pool/pexels-31519545.jpg",
-  airfield: "images/pexels-32272750.jpg",
+  island: "images/hero/hero-03.jpg",
+  coast: "images/hero/hero-03.jpg",
+  mountain: "images/hero/hero-05.jpg",
+  high: "images/hero/hero-07.jpg",
+  desert: "images/hero/hero-09.jpg",
+  canyon: "images/hero/hero-09.jpg",
+  cold: "images/hero/hero-11.jpg",
+  city: "images/hero/hero-01.jpg",
+  hub: "images/hero/hero-02.jpg",
+  airfield: "images/hero/hero-04.jpg",
 };
+
+/* 主题图源文件：先看 THEME 里指定的那张在不在，不在就按标签序号从 hero 里挑一张 */
+function themeSource(tag) {
+  const want = THEME[tag] ? join(root, THEME[tag]) : "";
+  if (want && existsSync(want)) return want;
+  if (HEROES.length) {
+    const i = Object.keys(THEME).indexOf(tag);
+    return HEROES[(i < 0 ? 0 : i) % HEROES.length];
+  }
+  return "";
+}
 
 function themeTag(p) {
   const name = `${p.name || ""} ${p.city || ""}`.toLowerCase();
@@ -99,11 +122,18 @@ for (const p of TODAY.picks) {
     p.photo = `images/picks/${DAY}/${icao}.jpg`;
     console.log(`  ${icao} Wikimedia 抓到 ${Math.round(n / 1024)} KB`);
   } catch (e) {
-    const tag = themeTag(p);
-    const src = join(root, THEME[tag]);
-    copyFileSync(src, dest);
-    p.photo = `images/picks/${DAY}/${icao}.jpg`;
-    console.log(`  ${icao} 退回主题图 ${tag}（${e.message}）`);
+    /* 兜底绝不能再抛错：源图缺了就跳过这一张，别把整个 workflow 拖挂 */
+    try {
+      const tag = themeTag(p);
+      const src = themeSource(tag);
+      if (!src) throw new Error("仓库里没有可用的主题图");
+      copyFileSync(src, dest);
+      p.photo = `images/picks/${DAY}/${icao}.jpg`;
+      console.log(`  ${icao} 退回主题图 ${tag}（${e.message}）`);
+    } catch (e2) {
+      p.photo = null;
+      console.log(`  ${icao} 配图失败，跳过（${e.message} / ${e2.message}）`);
+    }
   }
   await new Promise((r) => setTimeout(r, 400));
 }
