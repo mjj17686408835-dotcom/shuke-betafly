@@ -3,69 +3,69 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-04",
-  "generated": "2026-11-04T08:14:35.912Z",
-  "icao": "EKCH",
+  "date": "2026-11-06",
+  "generated": "2026-11-06T01:52:44.618Z",
+  "icao": "RJTT",
   "picks": [
     {
-      "icao": "EKCH",
+      "icao": "RJTT",
       "role": "hub",
-      "name": "Copenhagen Kastrup Airport",
-      "city": "Copenhagen",
-      "country": "DK",
-      "elev": 5,
-      "rwy": 3600,
-      "score": 118.4,
+      "name": "Tokyo Haneda International Airport",
+      "city": "Tokyo",
+      "country": "JP",
+      "elev": 11,
+      "rwy": 3360,
+      "score": 123,
       "weather": {
         "text": "晴",
-        "temp": 6,
+        "temp": 21,
         "cloud": 0,
-        "vis": 31720,
-        "wind": 7,
+        "vis": 41740,
+        "wind": 11,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/picks/2026-11-04/EKCH.jpg"
+      "photo": "images/picks/2026-11-06/RJTT.jpg"
     },
     {
-      "icao": "ZULS",
+      "icao": "ZPPP",
       "role": "challenge",
-      "name": "Lhasa Gonggar International Airport",
-      "city": "Shannan (Gonggar)",
+      "name": "Kunming Changshui International Airport",
+      "city": "Kunming",
       "country": "CN",
-      "elev": 3570,
-      "rwy": 4000,
-      "score": 145.4,
+      "elev": 2104,
+      "rwy": 4500,
+      "score": 118.7,
       "weather": {
         "text": "大部晴朗",
-        "temp": 15,
-        "cloud": 30,
-        "vis": 49520,
-        "wind": 12,
+        "temp": 18,
+        "cloud": 46,
+        "vis": 6580,
+        "wind": 9,
         "isDay": true,
         "code": 1
       },
-      "photo": "images/airports/ZULS.jpg"
+      "photo": "images/airports/ZPPP.jpg"
     },
     {
-      "icao": "GCHI",
+      "icao": "ESNS",
       "role": "scenic",
-      "name": "El Hierro Airport",
-      "city": "El Hierro Island",
-      "country": "ES",
-      "elev": 31,
-      "rwy": 1250,
-      "score": 120.8,
+      "name": "Skellefteå Airport",
+      "city": "Skellefteå",
+      "country": "SE",
+      "elev": 48,
+      "rwy": 2520,
+      "score": 91.7,
       "weather": {
-        "text": "大部晴朗",
-        "temp": 20,
-        "cloud": 27,
-        "vis": 38400,
-        "wind": 5,
-        "isDay": true,
-        "code": 1
+        "text": "晴",
+        "temp": -1,
+        "cloud": 17,
+        "vis": 72800,
+        "wind": 10,
+        "isDay": false,
+        "code": 0
       },
-      "photo": "images/picks/2026-11-04/GCHI.jpg"
+      "photo": "images/picks/2026-11-06/ESNS.jpg"
     }
   ],
   "history": [
@@ -86,6 +86,9 @@ const TODAY_AUTO = {
     "PAJN",
     "EKCH",
     "ZULS",
-    "GCHI"
+    "GCHI",
+    "RJTT",
+    "ZPPP",
+    "ESNS"
   ]
 };
