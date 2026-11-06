@@ -1,7 +1,16 @@
 /* 由 scripts/fetch-scenery.mjs 自动生成，请勿手改。
-   抓取时间：2026-11-05T01:58:15.276Z
+   抓取时间：2026-11-06T01:58:11.679Z
    条目数：83 */
 const SCENERY_AUTO = [
+  {
+    "airport": "KMSY",
+    "title": "iniBuilds – KMSY Louis Armstrong New Orleans International Airport",
+    "author": "iniBuilds",
+    "version": "v1.0.0",
+    "date": "2026-11-05",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/6ddc7cc67c25a2658b5f362db14ddde6a88d8b4b.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-kmsy-louis-armstrong-new-orleans-international-airport-msfs-2024/"
+  },
   {
     "airport": "CYGZ",
     "title": "Simaddons – CYGZ Grise Fiord Airport, CYEU Eureka Airport & CYLT Alert Airport v1.0.1 (Updated)",
@@ -577,15 +586,6 @@ const SCENERY_AUTO = [
     "date": "2026-10-17",
     "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/07/38750eacd6f263dc0fe298743276de1ae770cb4f.jpg",
     "url": "https://sceneryaddons.org/inibuilds-othh-doha-hamad-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "KMEM",
-    "title": "Glideslope Pro – KMEM Memphis International Airport v2.1.2 (Added GSX)",
-    "author": "Glideslope Pro",
-    "version": "v2.1.2",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/11/c230f60fc3c48441ce1d7518b6b029c1cbacacd1.jpg",
-    "url": "https://sceneryaddons.org/glideslope-pro-kmem-memphis-international-airport-msfs-2024/"
   },
   {
     "airport": "KOAK",
