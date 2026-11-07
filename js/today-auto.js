@@ -3,69 +3,69 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-06",
-  "generated": "2026-11-06T01:52:44.618Z",
-  "icao": "RJTT",
+  "date": "2026-11-07",
+  "generated": "2026-11-07T01:23:17.407Z",
+  "icao": "ZSSS",
   "picks": [
     {
-      "icao": "RJTT",
+      "icao": "ZSSS",
       "role": "hub",
-      "name": "Tokyo Haneda International Airport",
-      "city": "Tokyo",
-      "country": "JP",
-      "elev": 11,
-      "rwy": 3360,
-      "score": 123,
+      "name": "Shanghai Hongqiao International Airport",
+      "city": "Shanghai (Minhang)",
+      "country": "CN",
+      "elev": 3,
+      "rwy": 3400,
+      "score": 122.3,
       "weather": {
         "text": "晴",
-        "temp": 21,
-        "cloud": 0,
-        "vis": 41740,
-        "wind": 11,
+        "temp": 18,
+        "cloud": 11,
+        "vis": 22180,
+        "wind": 18,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/picks/2026-11-06/RJTT.jpg"
+      "photo": "images/airports/ZSSS.jpg"
     },
     {
-      "icao": "ZPPP",
+      "icao": "HAAB",
       "role": "challenge",
-      "name": "Kunming Changshui International Airport",
-      "city": "Kunming",
-      "country": "CN",
-      "elev": 2104,
-      "rwy": 4500,
-      "score": 118.7,
-      "weather": {
-        "text": "大部晴朗",
-        "temp": 18,
-        "cloud": 46,
-        "vis": 6580,
-        "wind": 9,
-        "isDay": true,
-        "code": 1
-      },
-      "photo": "images/airports/ZPPP.jpg"
-    },
-    {
-      "icao": "ESNS",
-      "role": "scenic",
-      "name": "Skellefteå Airport",
-      "city": "Skellefteå",
-      "country": "SE",
-      "elev": 48,
-      "rwy": 2520,
-      "score": 91.7,
+      "name": "Addis Ababa Bole International Airport",
+      "city": "Addis Ababa",
+      "country": "ET",
+      "elev": 2326,
+      "rwy": 3800,
+      "score": 117.5,
       "weather": {
         "text": "晴",
-        "temp": -1,
-        "cloud": 17,
-        "vis": 72800,
-        "wind": 10,
+        "temp": 12,
+        "cloud": 2,
+        "vis": 28960,
+        "wind": 4,
         "isDay": false,
         "code": 0
       },
-      "photo": "images/picks/2026-11-06/ESNS.jpg"
+      "photo": "images/picks/2026-11-07/HAAB.jpg"
+    },
+    {
+      "icao": "KOAK",
+      "role": "scenic",
+      "name": "Oakland San Francisco Bay Airport",
+      "city": "Oakland",
+      "country": "US",
+      "elev": 3,
+      "rwy": 3206,
+      "score": 108.6,
+      "weather": {
+        "text": "晴",
+        "temp": 16,
+        "cloud": 0,
+        "vis": 19900,
+        "wind": 8,
+        "isDay": false,
+        "code": 0
+      },
+      "photo": "images/picks/2026-11-07/KOAK.jpg"
     }
   ],
   "history": [
@@ -89,6 +89,9 @@ const TODAY_AUTO = {
     "GCHI",
     "RJTT",
     "ZPPP",
-    "ESNS"
+    "ESNS",
+    "ZSSS",
+    "HAAB",
+    "KOAK"
   ]
 };
