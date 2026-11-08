@@ -3,69 +3,69 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-07",
-  "generated": "2026-11-07T01:23:17.407Z",
-  "icao": "ZSSS",
+  "date": "2026-11-08",
+  "generated": "2026-11-08T00:57:50.397Z",
+  "icao": "VGHS",
   "picks": [
     {
-      "icao": "ZSSS",
+      "icao": "VGHS",
       "role": "hub",
-      "name": "Shanghai Hongqiao International Airport",
-      "city": "Shanghai (Minhang)",
-      "country": "CN",
-      "elev": 3,
-      "rwy": 3400,
-      "score": 122.3,
+      "name": "Hazrat Shahjalal International Airport",
+      "city": "Dhaka",
+      "country": "BD",
+      "elev": 9,
+      "rwy": 3200,
+      "score": 114,
       "weather": {
         "text": "晴",
-        "temp": 18,
-        "cloud": 11,
-        "vis": 22180,
-        "wind": 18,
+        "temp": 22,
+        "cloud": 0,
+        "vis": 5640,
+        "wind": 6,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/ZSSS.jpg"
+      "photo": "images/picks/2026-11-08/VGHS.jpg"
     },
     {
-      "icao": "HAAB",
+      "icao": "KSBA",
       "role": "challenge",
-      "name": "Addis Ababa Bole International Airport",
-      "city": "Addis Ababa",
-      "country": "ET",
-      "elev": 2326,
-      "rwy": 3800,
-      "score": 117.5,
+      "name": "Santa Barbara Municipal Airport",
+      "city": "Santa Barbara",
+      "country": "US",
+      "elev": 4,
+      "rwy": 1840,
+      "score": 114.9,
       "weather": {
         "text": "晴",
-        "temp": 12,
-        "cloud": 2,
-        "vis": 28960,
-        "wind": 4,
-        "isDay": false,
+        "temp": 23,
+        "cloud": 0,
+        "vis": 37000,
+        "wind": 2,
+        "isDay": true,
         "code": 0
       },
-      "photo": "images/picks/2026-11-07/HAAB.jpg"
+      "photo": "images/picks/2026-11-08/KSBA.jpg"
     },
     {
-      "icao": "KOAK",
+      "icao": "CYOA",
       "role": "scenic",
-      "name": "Oakland San Francisco Bay Airport",
-      "city": "Oakland",
-      "country": "US",
-      "elev": 3,
-      "rwy": 3206,
-      "score": 108.6,
+      "name": "Ekati Airport",
+      "city": "Ekati",
+      "country": "CA",
+      "elev": 468,
+      "rwy": 1954,
+      "score": 80.9,
       "weather": {
-        "text": "晴",
-        "temp": 16,
-        "cloud": 0,
-        "vis": 19900,
-        "wind": 8,
+        "text": "大部晴朗",
+        "temp": -21,
+        "cloud": 41,
+        "vis": 89920,
+        "wind": 12,
         "isDay": false,
-        "code": 0
+        "code": 1
       },
-      "photo": "images/picks/2026-11-07/KOAK.jpg"
+      "photo": "images/picks/2026-11-08/CYOA.jpg"
     }
   ],
   "history": [
@@ -92,6 +92,9 @@ const TODAY_AUTO = {
     "ESNS",
     "ZSSS",
     "HAAB",
-    "KOAK"
+    "KOAK",
+    "VGHS",
+    "KSBA",
+    "CYOA"
   ]
 };
