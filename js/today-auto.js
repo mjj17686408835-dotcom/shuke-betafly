@@ -3,69 +3,69 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-08",
-  "generated": "2026-11-08T00:57:50.397Z",
-  "icao": "VGHS",
+  "date": "2026-11-09",
+  "generated": "2026-11-09T01:17:44.975Z",
+  "icao": "ZBAA",
   "picks": [
     {
-      "icao": "VGHS",
+      "icao": "ZBAA",
       "role": "hub",
-      "name": "Hazrat Shahjalal International Airport",
-      "city": "Dhaka",
-      "country": "BD",
-      "elev": 9,
-      "rwy": 3200,
-      "score": 114,
+      "name": "Beijing Capital International Airport",
+      "city": "Beijing",
+      "country": "CN",
+      "elev": 35,
+      "rwy": 3800,
+      "score": 131,
       "weather": {
         "text": "晴",
-        "temp": 22,
+        "temp": 3,
         "cloud": 0,
-        "vis": 5640,
-        "wind": 6,
+        "vis": 17500,
+        "wind": 7,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/picks/2026-11-08/VGHS.jpg"
+      "photo": "images/airports/ZBAA.jpg"
     },
     {
-      "icao": "KSBA",
+      "icao": "CYXC",
       "role": "challenge",
-      "name": "Santa Barbara Municipal Airport",
-      "city": "Santa Barbara",
-      "country": "US",
-      "elev": 4,
-      "rwy": 1840,
-      "score": 114.9,
+      "name": "Cranbrook/Canadian Rockies International Airport",
+      "city": "Cranbrook",
+      "country": "CA",
+      "elev": 939,
+      "rwy": 1829,
+      "score": 107.6,
       "weather": {
         "text": "晴",
-        "temp": 23,
+        "temp": 5,
         "cloud": 0,
-        "vis": 37000,
-        "wind": 2,
-        "isDay": true,
-        "code": 0
-      },
-      "photo": "images/picks/2026-11-08/KSBA.jpg"
-    },
-    {
-      "icao": "CYOA",
-      "role": "scenic",
-      "name": "Ekati Airport",
-      "city": "Ekati",
-      "country": "CA",
-      "elev": 468,
-      "rwy": 1954,
-      "score": 80.9,
-      "weather": {
-        "text": "大部晴朗",
-        "temp": -21,
-        "cloud": 41,
-        "vis": 89920,
+        "vis": 36300,
         "wind": 12,
         "isDay": false,
-        "code": 1
+        "code": 0
       },
-      "photo": "images/picks/2026-11-08/CYOA.jpg"
+      "photo": "images/picks/2026-11-09/CYXC.jpg"
+    },
+    {
+      "icao": "KSSI",
+      "role": "scenic",
+      "name": "St Simons Island Airport",
+      "city": "St Simons Island",
+      "country": "US",
+      "elev": 6,
+      "rwy": 1702,
+      "score": 104.4,
+      "weather": {
+        "text": "晴",
+        "temp": 17,
+        "cloud": 10,
+        "vis": 18200,
+        "wind": 10,
+        "isDay": false,
+        "code": 0
+      },
+      "photo": "images/picks/2026-11-09/KSSI.jpg"
     }
   ],
   "history": [
@@ -95,6 +95,9 @@ const TODAY_AUTO = {
     "KOAK",
     "VGHS",
     "KSBA",
-    "CYOA"
+    "CYOA",
+    "ZBAA",
+    "CYXC",
+    "KSSI"
   ]
 };
