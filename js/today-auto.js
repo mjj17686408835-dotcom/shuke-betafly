@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-09",
-  "generated": "2026-11-09T01:17:44.975Z",
-  "icao": "ZBAA",
+  "date": "2026-11-10",
+  "generated": "2026-11-10T03:52:15.906Z",
+  "icao": "VNKT",
   "picks": [
     {
-      "icao": "ZBAA",
+      "icao": "VNKT",
       "role": "hub",
-      "name": "Beijing Capital International Airport",
-      "city": "Beijing",
-      "country": "CN",
-      "elev": 35,
-      "rwy": 3800,
-      "score": 131,
+      "name": "Tribhuvan International Airport",
+      "city": "Kathmandu",
+      "country": "NP",
+      "elev": 1338,
+      "rwy": 3350,
+      "score": 118.4,
       "weather": {
         "text": "晴",
-        "temp": 3,
-        "cloud": 0,
-        "vis": 17500,
-        "wind": 7,
+        "temp": 20,
+        "cloud": 2,
+        "vis": 12760,
+        "wind": 5,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/ZBAA.jpg"
+      "photo": "images/airports/VNKT.jpg"
     },
     {
-      "icao": "CYXC",
+      "icao": "LGSK",
       "role": "challenge",
-      "name": "Cranbrook/Canadian Rockies International Airport",
-      "city": "Cranbrook",
-      "country": "CA",
-      "elev": 939,
-      "rwy": 1829,
-      "score": 107.6,
+      "name": "Skiathos Island National Airport",
+      "city": "Skiathos",
+      "country": "GR",
+      "elev": 16,
+      "rwy": 1628,
+      "score": 75.6,
       "weather": {
-        "text": "晴",
-        "temp": 5,
-        "cloud": 0,
-        "vis": 36300,
-        "wind": 12,
+        "text": "多云",
+        "temp": 13,
+        "cloud": 74,
+        "vis": 23900,
+        "wind": 6,
         "isDay": false,
-        "code": 0
+        "code": 2
       },
-      "photo": "images/picks/2026-11-09/CYXC.jpg"
+      "photo": "images/picks/2026-11-10/LGSK.jpg"
     },
     {
-      "icao": "KSSI",
+      "icao": "CYQT",
       "role": "scenic",
-      "name": "St Simons Island Airport",
-      "city": "St Simons Island",
-      "country": "US",
-      "elev": 6,
-      "rwy": 1702,
-      "score": 104.4,
+      "name": "Thunder Bay International Airport",
+      "city": "Thunder Bay",
+      "country": "CA",
+      "elev": 199,
+      "rwy": 2231,
+      "score": 80.9,
       "weather": {
-        "text": "晴",
-        "temp": 17,
-        "cloud": 10,
-        "vis": 18200,
+        "text": "大部晴朗",
+        "temp": 2,
+        "cloud": 31,
+        "vis": 14600,
         "wind": 10,
         "isDay": false,
-        "code": 0
+        "code": 1
       },
-      "photo": "images/picks/2026-11-09/KSSI.jpg"
+      "photo": "images/picks/2026-11-10/CYQT.jpg"
     }
   ],
   "history": [
-    "FAKM",
-    "UNIS",
-    "YBHM",
     "ZLIC",
     "UCFL",
     "UACC",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYOA",
     "ZBAA",
     "CYXC",
-    "KSSI"
+    "KSSI",
+    "VNKT",
+    "LGSK",
+    "CYQT"
   ]
 };
