@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-10",
-  "generated": "2026-11-10T03:52:15.906Z",
-  "icao": "VNKT",
+  "date": "2026-11-11",
+  "generated": "2026-11-11T01:33:54.502Z",
+  "icao": "VIDP",
   "picks": [
     {
-      "icao": "VNKT",
+      "icao": "VIDP",
       "role": "hub",
-      "name": "Tribhuvan International Airport",
-      "city": "Kathmandu",
-      "country": "NP",
-      "elev": 1338,
-      "rwy": 3350,
-      "score": 118.4,
+      "name": "Indira Gandhi International Airport",
+      "city": "New Delhi",
+      "country": "IN",
+      "elev": 237,
+      "rwy": 4430,
+      "score": 117.8,
       "weather": {
         "text": "晴",
-        "temp": 20,
-        "cloud": 2,
-        "vis": 12760,
-        "wind": 5,
+        "temp": 17,
+        "cloud": 0,
+        "vis": 6420,
+        "wind": 4,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/VNKT.jpg"
+      "photo": "images/picks/2026-11-11/VIDP.jpg"
     },
     {
-      "icao": "LGSK",
+      "icao": "CYGK",
       "role": "challenge",
-      "name": "Skiathos Island National Airport",
-      "city": "Skiathos",
-      "country": "GR",
-      "elev": 16,
-      "rwy": 1628,
-      "score": 75.6,
+      "name": "Kingston Norman Rogers Airport",
+      "city": "Kingston",
+      "country": "CA",
+      "elev": 93,
+      "rwy": 1829,
+      "score": 96.5,
       "weather": {
-        "text": "多云",
-        "temp": 13,
-        "cloud": 74,
-        "vis": 23900,
-        "wind": 6,
+        "text": "晴",
+        "temp": 8,
+        "cloud": 1,
+        "vis": 19000,
+        "wind": 17,
         "isDay": false,
-        "code": 2
+        "code": 0
       },
-      "photo": "images/picks/2026-11-10/LGSK.jpg"
+      "photo": "images/picks/2026-11-11/CYGK.jpg"
     },
     {
-      "icao": "CYQT",
+      "icao": "EGPN",
       "role": "scenic",
-      "name": "Thunder Bay International Airport",
-      "city": "Thunder Bay",
-      "country": "CA",
-      "elev": 199,
-      "rwy": 2231,
-      "score": 80.9,
+      "name": "Dundee Airport",
+      "city": "Dundee",
+      "country": "GB",
+      "elev": 5,
+      "rwy": 1400,
+      "score": 63.8,
       "weather": {
-        "text": "大部晴朗",
-        "temp": 2,
-        "cloud": 31,
-        "vis": 14600,
-        "wind": 10,
+        "text": "阴",
+        "temp": 4,
+        "cloud": 99,
+        "vis": 33340,
+        "wind": 3,
         "isDay": false,
-        "code": 1
+        "code": 3
       },
-      "photo": "images/picks/2026-11-10/CYQT.jpg"
+      "photo": "images/picks/2026-11-11/EGPN.jpg"
     }
   ],
   "history": [
-    "ZLIC",
-    "UCFL",
-    "UACC",
     "ZBDS",
     "ZMBH",
     "FVFA",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "KSSI",
     "VNKT",
     "LGSK",
-    "CYQT"
+    "CYQT",
+    "VIDP",
+    "CYGK",
+    "EGPN"
   ]
 };
