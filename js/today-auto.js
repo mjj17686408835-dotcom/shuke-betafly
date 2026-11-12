@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-11",
-  "generated": "2026-11-11T01:33:54.502Z",
-  "icao": "VIDP",
+  "date": "2026-11-12",
+  "generated": "2026-11-12T02:35:20.812Z",
+  "icao": "SUMU",
   "picks": [
     {
-      "icao": "VIDP",
+      "icao": "SUMU",
       "role": "hub",
-      "name": "Indira Gandhi International Airport",
-      "city": "New Delhi",
-      "country": "IN",
-      "elev": 237,
-      "rwy": 4430,
-      "score": 117.8,
+      "name": "Carrasco General Cesáreo L. Berisso International Airport",
+      "city": "Ciudad de la Costa",
+      "country": "UY",
+      "elev": 32,
+      "rwy": 3200,
+      "score": 102,
       "weather": {
         "text": "晴",
-        "temp": 17,
+        "temp": 19,
         "cloud": 0,
-        "vis": 6420,
-        "wind": 4,
-        "isDay": true,
+        "vis": 39600,
+        "wind": 10,
+        "isDay": false,
         "code": 0
       },
-      "photo": "images/picks/2026-11-11/VIDP.jpg"
+      "photo": "images/picks/2026-11-12/SUMU.jpg"
     },
     {
-      "icao": "CYGK",
+      "icao": "MGGT",
       "role": "challenge",
-      "name": "Kingston Norman Rogers Airport",
-      "city": "Kingston",
-      "country": "CA",
-      "elev": 93,
-      "rwy": 1829,
-      "score": 96.5,
+      "name": "La Aurora International Airport",
+      "city": "Guatemala City",
+      "country": "GT",
+      "elev": 1509,
+      "rwy": 2987,
+      "score": 99.5,
       "weather": {
-        "text": "晴",
-        "temp": 8,
-        "cloud": 1,
-        "vis": 19000,
-        "wind": 17,
+        "text": "大部晴朗",
+        "temp": 20,
+        "cloud": 27,
+        "vis": 32380,
+        "wind": 10,
         "isDay": false,
-        "code": 0
+        "code": 1
       },
-      "photo": "images/picks/2026-11-11/CYGK.jpg"
+      "photo": "images/picks/2026-11-12/MGGT.jpg"
     },
     {
-      "icao": "EGPN",
+      "icao": "CYRT",
       "role": "scenic",
-      "name": "Dundee Airport",
-      "city": "Dundee",
-      "country": "GB",
-      "elev": 5,
-      "rwy": 1400,
-      "score": 63.8,
+      "name": "Rankin Inlet Airport",
+      "city": "Rankin Inlet",
+      "country": "CA",
+      "elev": 29,
+      "rwy": 1829,
+      "score": 91.4,
       "weather": {
-        "text": "阴",
-        "temp": 4,
-        "cloud": 99,
-        "vis": 33340,
-        "wind": 3,
+        "text": "大部晴朗",
+        "temp": -16,
+        "cloud": 29,
+        "vis": 26180,
+        "wind": 4,
         "isDay": false,
-        "code": 3
+        "code": 1
       },
-      "photo": "images/picks/2026-11-11/EGPN.jpg"
+      "photo": "images/picks/2026-11-12/CYRT.jpg"
     }
   ],
   "history": [
-    "ZBDS",
-    "ZMBH",
-    "FVFA",
     "ZWWW",
     "VQPR",
     "PAJN",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYQT",
     "VIDP",
     "CYGK",
-    "EGPN"
+    "EGPN",
+    "SUMU",
+    "MGGT",
+    "CYRT"
   ]
 };
