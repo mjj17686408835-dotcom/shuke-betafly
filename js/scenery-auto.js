@@ -1,7 +1,205 @@
 /* 由 scripts/fetch-scenery.mjs 自动生成，请勿手改。
-   抓取时间：2026-11-12T02:40:12.190Z
+   抓取时间：2026-11-13T02:21:46.527Z
    条目数：83 */
 const SCENERY_AUTO = [
+  {
+    "airport": "LIRN",
+    "title": "RDPresets – LIRN Naples International Airport v1.0.0 (Fixed)",
+    "author": "RDPresets",
+    "version": "v1.0.0",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/19cd07c1175b395875f9af9817e2d8c158d2cb40-1280x720.jpg",
+    "url": "https://sceneryaddons.org/rdpresets-lirn-naples-international-airport/"
+  },
+  {
+    "airport": "TJPS",
+    "title": "Photorico Scenery – TJPS Mercedita International Airport",
+    "author": "Photorico Scenery",
+    "version": "v3.1.0",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/08/407a20d9467e8529f3dba1d3cb3b3abbe8d5b080.jpg",
+    "url": "https://sceneryaddons.org/photorico-scenery-tjps-mercedita-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGTF",
+    "title": "Burning Blue Design – EGTF Fairoaks Airport",
+    "author": "Burning Blue Design",
+    "version": "v2.5.1",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/cef70030c2a5c3ab7f9aa0f5cbfc9ee44c36a1a8.jpg",
+    "url": "https://sceneryaddons.org/burning-blue-design-egtf-fairoaks-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGSX",
+    "title": "Burning Blue Design – EGSX North Weald Airport",
+    "author": "Burning Blue Design",
+    "version": "v2.5.0",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/03/a841446eab28452be034c91bf24ca79baec85238.jpg",
+    "url": "https://sceneryaddons.org/burning-blue-design-egsx-north-weald-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGKR",
+    "title": "Burning Blue Design – EGKR Redhill Airport",
+    "author": "Burning Blue Design",
+    "version": "v2.5.3",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/5b9db5d0cf8b6c1b06364f1524df292b67045720.jpg",
+    "url": "https://sceneryaddons.org/burning-blue-design-egkr-redhill-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGGD",
+    "title": "SoFly – EGGD Bristol Airport",
+    "author": "SoFly",
+    "version": "v1.1.5",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/11/139ab20aa5d01bb4b2df68b4845a25e5f632507c.jpg",
+    "url": "https://sceneryaddons.org/sofly-eggd-bristol-airport-msfs-2024/"
+  },
+  {
+    "airport": "LWOH",
+    "title": "SoFly – LWOH Ohrid St. Paul the Apostle Airport",
+    "author": "SoFly",
+    "version": "v1.0.2",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/11/782b56e7aac4078c80ec84318362a082194b05a0.jpg",
+    "url": "https://sceneryaddons.org/sofly-lwoh-ohrid-st-paul-the-apostle-airport/"
+  },
+  {
+    "airport": "VTSP",
+    "title": "SiamFlight – VTSP Phuket International Airport",
+    "author": "SiamFlight",
+    "version": "v1.0.5",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/03/bd069da894e1f71df8f6c34e711db3b8d31f0f51.jpg",
+    "url": "https://sceneryaddons.org/siamflight-vtsp-phuket-international-airport/"
+  },
+  {
+    "airport": "",
+    "title": "Orbx – CA107 Nordheimer Creek Ranch Airport",
+    "author": "Orbx",
+    "version": "v1.1.0",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/08/9e88230b1219d4f21478ad96a007f01b58768eb8.jpg",
+    "url": "https://sceneryaddons.org/orbx-ca107-nordheimer-creek-ranch-airport-msfs-2024/"
+  },
+  {
+    "airport": "KBFM",
+    "title": "Drzewiecki Design – KBFM Mobile International Airport",
+    "author": "Drzewiecki Design",
+    "version": "v1.1.0",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/09/2c577d04d18bd1667344f6b7677ca3d78dcef060.jpg",
+    "url": "https://sceneryaddons.org/drzewiecki-design-kbfm-mobile-international-airport/"
+  },
+  {
+    "airport": "OMDB",
+    "title": "iniBuilds – OMDB Dubai International Airport, OMDU Skydive Dubai Airport & Landmarks",
+    "author": "iniBuilds",
+    "version": "v2.0.3",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/09/4ad7f37c025996b3e88ccfdadf03f3f2f0a2fda2.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-omdb-dubai-international-airport-omdu-skydive-dubai-airport-landmarks-msfs-2024/"
+  },
+  {
+    "airport": "VHHH",
+    "title": "iniBuilds – VHHH Hong Kong International Airport",
+    "author": "iniBuilds",
+    "version": "v1.1.1",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/03/dbb8db7fe718afedad1197d272c626337cfb726d.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-vhhh-hong-kong-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "OTHH",
+    "title": "iniBuilds – OTHH Doha Hamad International Airport",
+    "author": "iniBuilds",
+    "version": "v1.1.1",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/07/38750eacd6f263dc0fe298743276de1ae770cb4f.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-othh-doha-hamad-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "LOWI",
+    "title": "iniBuilds – LOWI Innsbruck Airport v1.0.3 (Update 2)",
+    "author": "iniBuilds",
+    "version": "v1.0.3",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/11/c4bf43b3d7e8ed7a62debdf6e3827aaa9a90292c.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-lowi-innsbruck-airport-msfs-2024/"
+  },
+  {
+    "airport": "LEIB",
+    "title": "iniBuilds – LEIB Ibiza Airport",
+    "author": "iniBuilds",
+    "version": "v1.0.3",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/12/c56cabb135d0f394c0c974ba1839778d33a504b8.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-leib-ibiza-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGLL",
+    "title": "iniBuilds – EGLL Heathrow Airport",
+    "author": "iniBuilds",
+    "version": "v1.1.1",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/03/73b60a4f6443af7d490732b04016b9c071e4e76d.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-egll-heathrow-airport-msfs-2024/"
+  },
+  {
+    "airport": "KPSP",
+    "title": "iniBuilds – KPSP Palm Springs International Airport",
+    "author": "iniBuilds",
+    "version": "v1.1.1",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/12/7f848fe4aca45f1dcc1156fb2875a212cd56f89e.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-kpsp-palm-springs-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "KORD",
+    "title": "iniBuilds – KORD O&#8217;Hare International Airport",
+    "author": "iniBuilds",
+    "version": "v1.0.3",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/07/f3837eb74561ecc1554565d5525977ee31290211.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-kord-o-hare-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "KJFK",
+    "title": "iniBuilds – KJFK New York John F. Kennedy International Airport v1.1.1 (Updated)",
+    "author": "iniBuilds",
+    "version": "v1.1.1",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/05/e5aab2c6638be23992068bfd239553c4d0f97fc3.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-kjfk-new-york-john-f-kennedy-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "KDFW",
+    "title": "iniBuilds – KDFW Dallas Fort Worth International Airport",
+    "author": "iniBuilds",
+    "version": "v1.0.4",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/02/c7af3558c431014b82b8f1a65e213b35d7b187ae.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-kdfw-dallas-fort-worth-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGCF",
+    "title": "Perseverance Scenery Developers – EGCF Sandtoft Airport",
+    "author": "Perseverance Scenery Developers",
+    "version": "v1.2.0",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/765ea9bbe793cc1d3e86703a0e4b8302f3d1ed21.jpg",
+    "url": "https://sceneryaddons.org/perseverance-scenery-developers-egcf-sandtoft-airport-msfs-2024/"
+  },
+  {
+    "airport": "EIWF",
+    "title": "UK2000 Scenery – EIWF Waterford Airport",
+    "author": "UK2000 Scenery",
+    "version": "v1.0.0",
+    "date": "2026-11-12",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/622daa69b7ca69c706907d33d72bdeb333c140c1.jpg",
+    "url": "https://sceneryaddons.org/uk2000-scenery-eiwf-waterford-airport/"
+  },
   {
     "airport": "KMSY",
     "title": "iniBuilds – KMSY Louis Armstrong New Orleans International Airport",
@@ -435,15 +633,6 @@ const SCENERY_AUTO = [
     "url": "https://sceneryaddons.org/uk2000-scenery-egpn-dundee-airport/"
   },
   {
-    "airport": "EGTF",
-    "title": "Burning Blue Design – EGTF Fairoaks Airport",
-    "author": "Burning Blue Design",
-    "version": "v2.5.0",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/cef70030c2a5c3ab7f9aa0f5cbfc9ee44c36a1a8.jpg",
-    "url": "https://sceneryaddons.org/burning-blue-design-egtf-fairoaks-airport-msfs-2024/"
-  },
-  {
     "airport": "EGSP",
     "title": "Burning Blue Design – EGSP Peterborough/Sibson Airport",
     "author": "Burning Blue Design",
@@ -559,194 +748,5 @@ const SCENERY_AUTO = [
     "date": "2026-10-23",
     "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/d5b9e46416b5a00ea479ef103e14ae9792c7d961.jpg",
     "url": "https://sceneryaddons.org/fly-2-high-khou-houston-william-p-hobby-airport-msfs-2024/"
-  },
-  {
-    "airport": "VIDP",
-    "title": "DhruvSim – VIDP Indira Gandhi / Delhi International Airport",
-    "author": "DhruvSim",
-    "version": "v1.2.5",
-    "date": "2026-10-17",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/08/5b03f33903644f5d723c49b72f3d9c94f9e33723.jpg",
-    "url": "https://sceneryaddons.org/dhruvsim-vidp-indira-gandhi-delhi-international-airport/"
-  },
-  {
-    "airport": "RJTT",
-    "title": "TechnoBrain – RJTT Tokyo / Haneda International Airport",
-    "author": "TechnoBrain",
-    "version": "v1.0.2",
-    "date": "2026-10-17",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/08/7d785c5e41af76da3737d20b3bdbfba10c1aea19.jpg",
-    "url": "https://sceneryaddons.org/technobrain-rjtt-tokyo-haneda-international-airport/"
-  },
-  {
-    "airport": "OTHH",
-    "title": "iniBuilds – OTHH Doha Hamad International Airport",
-    "author": "iniBuilds",
-    "version": "v1.1.0",
-    "date": "2026-10-17",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/07/38750eacd6f263dc0fe298743276de1ae770cb4f.jpg",
-    "url": "https://sceneryaddons.org/inibuilds-othh-doha-hamad-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "KOAK",
-    "title": "Glideslope Pro – KOAK Oakland International Airport",
-    "author": "Glideslope Pro",
-    "version": "v1.2.5",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/2eb03c8c2f0760710edfec338ae2369601c8d422.jpg",
-    "url": "https://sceneryaddons.org/glideslope-pro-koak-oakland-international-airport/"
-  },
-  {
-    "airport": "KDJT",
-    "title": "Glideslope Pro – KDJT President Donald J. Trump International Airport",
-    "author": "Glideslope Pro",
-    "version": "v1.1.2",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/f627c7ec0df174247b9d5e6d47e5896cc7c7fb53.jpg",
-    "url": "https://sceneryaddons.org/glideslope-pro-kdjt-president-donald-j-trump-international-airport/"
-  },
-  {
-    "airport": "LIPR",
-    "title": "RFscenerybuilding – LIPR Federico Fellini International Airport v1.2.0 MSFS 2020/2024",
-    "author": "RFscenerybuilding",
-    "version": "v1.2.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/bbafe26bd6d53dec5f50a2c969c421fa132f5d60.jpg",
-    "url": "https://sceneryaddons.org/rfscenerybuilding-lipr-federico-fellini-international-airport/"
-  },
-  {
-    "airport": "EGNJ",
-    "title": "FlyTampa – EGNJ Humberside Airport",
-    "author": "FlyTampa",
-    "version": "v1.3.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/04ad2561d8e838941297101ad76dd63725b5e972.jpg",
-    "url": "https://sceneryaddons.org/flytampa-egnj-humberside-airport/"
-  },
-  {
-    "airport": "KBCT",
-    "title": "Astralis Studios – KBCT Boca Raton Airport",
-    "author": "Astralis Studios",
-    "version": "v1.0.2",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/03/c3e6ea72a203ed83e59971971e9db95fb484a423.jpg",
-    "url": "https://sceneryaddons.org/astralis-studios-kbct-boca-raton-airport/"
-  },
-  {
-    "airport": "TJPS",
-    "title": "Photorico Scenery – TJPS Mercedita International Airport",
-    "author": "Photorico Scenery",
-    "version": "v3.0.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/08/407a20d9467e8529f3dba1d3cb3b3abbe8d5b080.jpg",
-    "url": "https://sceneryaddons.org/photorico-scenery-tjps-mercedita-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "VGHS",
-    "title": "Final Approach Design Studios – VGHS Hazrat Shahjalal / Dhaka International Airport",
-    "author": "Final Approach Design Studios",
-    "version": "v1.6.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/b495f188a8851d5eaa7896da76815668b06cacf5.jpg",
-    "url": "https://sceneryaddons.org/final-approach-design-studios-vghs-hazrat-shahjalal-dhaka-international-airport/"
-  },
-  {
-    "airport": "VNSB",
-    "title": "Aerosoft – VNSB Syangboche Airport / Mt. Everest Airports Vol. 3",
-    "author": "Aerosoft",
-    "version": "v1.5.1",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/04/7b29408cbd443d628d2dc94c682345ee793c82f1.jpg",
-    "url": "https://sceneryaddons.org/aerosoft-vnsb-syangboche-airport-mt-everest-airports-vol-3-msfs-2024/"
-  },
-  {
-    "airport": "VNKL",
-    "title": "Aerosoft – VNKL Kangel Danda & VNPL Phaplu Airport / Mt. Everest Airports Vol. 2",
-    "author": "Aerosoft",
-    "version": "v1.5.4",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/09/91495e2609c1b25f1422d4bb1c9dfbd044796b40.jpg",
-    "url": "https://sceneryaddons.org/aerosoft-vnkl-kangel-danda-vnpl-phaplu-airport-mt-everest-airports-vol-2-msfs-2024/"
-  },
-  {
-    "airport": "VNLK",
-    "title": "Aerosoft – VNLK Lukla Airport / Mt. Everest Airports Vol. 1",
-    "author": "Aerosoft",
-    "version": "v1.5.2",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/9cd04c3f07f224953acc6bf3cc39bb22dac059c9.jpg",
-    "url": "https://sceneryaddons.org/aerosoft-vnlk-lukla-airport-mt-everest-airports-vol-1-msfs-2024/"
-  },
-  {
-    "airport": "EDDB",
-    "title": "Aerosoft – EDDB Berlin Brandenburg Airport",
-    "author": "Aerosoft",
-    "version": "v3.4.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/03/9c530515661560b5af19dbe40cdc8ee6745e8a3f.jpg",
-    "url": "https://sceneryaddons.org/aerosoft-eddb-berlin-brandenburg-airport-msfs-2024/"
-  },
-  {
-    "airport": "KSGF",
-    "title": "RW Profiles – KSGF Springfield–Branson National Airport",
-    "author": "RW Profiles",
-    "version": "v1.0.5",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/897f4f9dd773533ffb444fc5a0f29740f4e7e0cf.jpg",
-    "url": "https://sceneryaddons.org/rw-profiles-ksgf-springfield-branson-national-airport/"
-  },
-  {
-    "airport": "ZSSS",
-    "title": "WF Scenery Studio – ZSSS Shanghai Hongqiao International Airport",
-    "author": "WF Scenery Studio",
-    "version": "v1.0.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/01/6951b564a0745f2e5aa4168ca76d53bae858fc48.jpg",
-    "url": "https://sceneryaddons.org/wf-scenery-studio-zsss-shanghai-hongqiao-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "",
-    "title": "Parallel 42 – 56WV Cheat River Island Airport",
-    "author": "Parallel 42",
-    "version": "v2.1.3",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/0f881665ad9c378444b119b4ddfce3f293f2e4d5.jpg",
-    "url": "https://sceneryaddons.org/parallel-42-56wv-cheat-river-island-airport-msfs-2024/"
-  },
-  {
-    "airport": "SBNT",
-    "title": "Rafael Tango Tango – SBNT Augusto Severo & SBSG Sao Goncalo do Amarante Airport / Megapack Natal",
-    "author": "Rafael Tango Tango",
-    "version": "v1.0.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/475f10ff860695dc9747851e52c8f9496e4f66e1.jpg",
-    "url": "https://sceneryaddons.org/rafael-tango-tango-sbnt-augusto-severo-sbsg-sao-goncalo-do-amarante-airport-megapack-natal/"
-  },
-  {
-    "airport": "MSLP",
-    "title": "PKSIM – MSLP El Salvador International Airport",
-    "author": "PKSIM",
-    "version": "v1.0.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/de554c130b5c93eef957f746d0a9353e69882d9f.jpg",
-    "url": "https://sceneryaddons.org/pksim-mslp-el-salvador-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "",
-    "title": "Backwood Studios – 0OR8 Sutton On Rogue Airport",
-    "author": "Backwood Studios",
-    "version": "v1.0.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/d734b508fb7089698f37fc71e3a3bb10a6014bff.jpg",
-    "url": "https://sceneryaddons.org/backwood-studios-0or8-sutton-on-rogue-airport-msfs-2024/"
-  },
-  {
-    "airport": "KSSI",
-    "title": "Orbx – KSSI McKinnon St. Simons Island Airport",
-    "author": "Orbx",
-    "version": "v1.1.0",
-    "date": "2026-10-12",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/e4f890d83b6e77c505fd01a75e71803b6a6887b4.jpg",
-    "url": "https://sceneryaddons.org/orbx-kssi-mckinnon-st-simons-island-airport-msfs-2024/"
   }
 ];
