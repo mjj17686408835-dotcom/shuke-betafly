@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-13",
-  "generated": "2026-11-13T02:14:07.136Z",
-  "icao": "RPVM",
+  "date": "2026-11-14",
+  "generated": "2026-11-14T01:53:37.486Z",
+  "icao": "VHHH",
   "picks": [
     {
-      "icao": "RPVM",
+      "icao": "VHHH",
       "role": "hub",
-      "name": "Mactan Cebu International Airport",
-      "city": "Cebu City/Lapu-Lapu City",
-      "country": "PH",
+      "name": "Hong Kong International Airport",
+      "city": "Hong Kong",
+      "country": "HK",
       "elev": 9,
-      "rwy": 3310,
-      "score": 105.5,
-      "weather": {
-        "text": "大部晴朗",
-        "temp": 30,
-        "cloud": 27,
-        "vis": 16920,
-        "wind": 15,
-        "isDay": true,
-        "code": 1
-      },
-      "photo": "images/picks/2026-11-13/RPVM.jpg"
-    },
-    {
-      "icao": "EGTK",
-      "role": "challenge",
-      "name": "London Oxford Airport",
-      "city": "Kidlington, Oxfordshire",
-      "country": "GB",
-      "elev": 82,
-      "rwy": 1526,
-      "score": 102.9,
+      "rwy": 3800,
+      "score": 120.9,
       "weather": {
         "text": "晴",
-        "temp": 1,
-        "cloud": 0,
-        "vis": 23520,
+        "temp": 23,
+        "cloud": 9,
+        "vis": 11800,
+        "wind": 13,
+        "isDay": true,
+        "code": 0
+      },
+      "photo": "images/picks/2026-11-14/VHHH.jpg"
+    },
+    {
+      "icao": "NZQN",
+      "role": "challenge",
+      "name": "Queenstown Airport",
+      "city": "Queenstown",
+      "country": "NZ",
+      "elev": 357,
+      "rwy": 1891,
+      "score": 97.5,
+      "weather": {
+        "text": "多云",
+        "temp": 18,
+        "cloud": 56,
+        "vis": 65300,
+        "wind": 4,
+        "isDay": true,
+        "code": 2
+      },
+      "photo": "images/airports/NZQN.jpg"
+    },
+    {
+      "icao": "CYVP",
+      "role": "scenic",
+      "name": "Kuujjuaq Airport",
+      "city": "Kuujjuaq",
+      "country": "CA",
+      "elev": 39,
+      "rwy": 1829,
+      "score": 57.3,
+      "weather": {
+        "text": "阴",
+        "temp": -2,
+        "cloud": 100,
+        "vis": 60940,
         "wind": 12,
         "isDay": false,
-        "code": 0
+        "code": 3
       },
-      "photo": "images/picks/2026-11-13/EGTK.jpg"
-    },
-    {
-      "icao": "EKAH",
-      "role": "scenic",
-      "name": "Aarhus Airport",
-      "city": "Aarhus",
-      "country": "DK",
-      "elev": 25,
-      "rwy": 2777,
-      "score": 99.2,
-      "weather": {
-        "text": "晴",
-        "temp": 1,
-        "cloud": 1,
-        "vis": 38700,
-        "wind": 14,
-        "isDay": false,
-        "code": 0
-      },
-      "photo": "images/picks/2026-11-13/EKAH.jpg"
+      "photo": "images/picks/2026-11-14/CYVP.jpg"
     }
   ],
   "history": [
-    "ZGGG",
-    "KASE",
-    "PAJN",
     "EKCH",
     "ZULS",
     "GCHI",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYRT",
     "RPVM",
     "EGTK",
-    "EKAH"
+    "EKAH",
+    "VHHH",
+    "NZQN",
+    "CYVP"
   ]
 };
