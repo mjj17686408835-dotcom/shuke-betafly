@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-16",
-  "generated": "2026-11-16T01:27:37.343Z",
-  "icao": "KORD",
+  "date": "2026-11-17",
+  "generated": "2026-11-17T04:14:12.236Z",
+  "icao": "ZWWW",
   "picks": [
     {
-      "icao": "KORD",
+      "icao": "ZWWW",
       "role": "hub",
-      "name": "Chicago O'Hare International Airport",
-      "city": "Chicago",
-      "country": "US",
-      "elev": 207,
-      "rwy": 3962,
-      "score": 105.8,
-      "weather": {
-        "text": "晴",
-        "temp": 4,
-        "cloud": 0,
-        "vis": 31900,
-        "wind": 5,
-        "isDay": false,
-        "code": 0
-      },
-      "photo": "images/picks/2026-11-16/KORD.jpg"
-    },
-    {
-      "icao": "ZULS",
-      "role": "challenge",
-      "name": "Lhasa Gonggar International Airport",
-      "city": "Shannan (Gonggar)",
+      "name": "Ürümqi Tianshan International Airport",
+      "city": "Ürümqi",
       "country": "CN",
-      "elev": 3570,
-      "rwy": 4000,
-      "score": 122.4,
+      "elev": 648,
+      "rwy": 3600,
+      "score": 126.5,
       "weather": {
         "text": "晴",
-        "temp": 3,
-        "cloud": 1,
-        "vis": 3920,
-        "wind": 0,
+        "temp": 0,
+        "cloud": 2,
+        "vis": 6520,
+        "wind": 4,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/ZULS.jpg"
+      "photo": "images/airports/ZWWW.jpg"
     },
     {
-      "icao": "CYDF",
-      "role": "scenic",
-      "name": "Deer Lake Airport",
-      "city": "Deer Lake",
-      "country": "CA",
-      "elev": 22,
-      "rwy": 2440,
-      "score": 58.8,
+      "icao": "VQPR",
+      "role": "challenge",
+      "name": "Paro International Airport",
+      "city": "Paro",
+      "country": "BT",
+      "elev": 2245,
+      "rwy": 2265,
+      "score": 131,
       "weather": {
-        "text": "阴",
-        "temp": 2,
-        "cloud": 100,
-        "vis": 34400,
-        "wind": 6,
-        "isDay": false,
-        "code": 3
+        "text": "晴",
+        "temp": 16,
+        "cloud": 5,
+        "vis": 16700,
+        "wind": 5,
+        "isDay": true,
+        "code": 0
       },
-      "photo": "images/picks/2026-11-16/CYDF.jpg"
+      "photo": "images/airports/VQPR.jpg"
+    },
+    {
+      "icao": "EKCH",
+      "role": "scenic",
+      "name": "Copenhagen Kastrup Airport",
+      "city": "Copenhagen",
+      "country": "DK",
+      "elev": 5,
+      "rwy": 3600,
+      "score": 100.8,
+      "weather": {
+        "text": "晴",
+        "temp": 4,
+        "cloud": 11,
+        "vis": 39960,
+        "wind": 17,
+        "isDay": false,
+        "code": 0
+      },
+      "photo": "images/picks/2026-11-17/EKCH.jpg"
     }
   ],
   "history": [
-    "ZSSS",
-    "HAAB",
-    "KOAK",
     "VGHS",
     "KSBA",
     "CYOA",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "PAJN",
     "KORD",
     "ZULS",
-    "CYDF"
+    "CYDF",
+    "ZWWW",
+    "VQPR",
+    "EKCH"
   ]
 };
