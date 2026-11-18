@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-17",
-  "generated": "2026-11-17T04:14:12.236Z",
-  "icao": "ZWWW",
+  "date": "2026-11-18",
+  "generated": "2026-11-18T03:12:30.394Z",
+  "icao": "VCBI",
   "picks": [
     {
-      "icao": "ZWWW",
+      "icao": "VCBI",
       "role": "hub",
-      "name": "Ürümqi Tianshan International Airport",
-      "city": "Ürümqi",
-      "country": "CN",
-      "elev": 648,
-      "rwy": 3600,
-      "score": 126.5,
+      "name": "Bandaranaike International Colombo Airport",
+      "city": "Colombo",
+      "country": "LK",
+      "elev": 9,
+      "rwy": 3350,
+      "score": 116.7,
       "weather": {
         "text": "晴",
-        "temp": 0,
+        "temp": 28,
         "cloud": 2,
-        "vis": 6520,
-        "wind": 4,
+        "vis": 20560,
+        "wind": 8,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/ZWWW.jpg"
+      "photo": "images/picks/2026-11-18/VCBI.jpg"
     },
     {
-      "icao": "VQPR",
+      "icao": "HAAB",
       "role": "challenge",
-      "name": "Paro International Airport",
-      "city": "Paro",
-      "country": "BT",
-      "elev": 2245,
-      "rwy": 2265,
-      "score": 131,
+      "name": "Addis Ababa Bole International Airport",
+      "city": "Addis Ababa",
+      "country": "ET",
+      "elev": 2326,
+      "rwy": 3800,
+      "score": 119.7,
       "weather": {
         "text": "晴",
-        "temp": 16,
-        "cloud": 5,
-        "vis": 16700,
-        "wind": 5,
-        "isDay": true,
-        "code": 0
-      },
-      "photo": "images/airports/VQPR.jpg"
-    },
-    {
-      "icao": "EKCH",
-      "role": "scenic",
-      "name": "Copenhagen Kastrup Airport",
-      "city": "Copenhagen",
-      "country": "DK",
-      "elev": 5,
-      "rwy": 3600,
-      "score": 100.8,
-      "weather": {
-        "text": "晴",
-        "temp": 4,
-        "cloud": 11,
-        "vis": 39960,
-        "wind": 17,
+        "temp": 12,
+        "cloud": 9,
+        "vis": 31500,
+        "wind": 0,
         "isDay": false,
         "code": 0
       },
-      "photo": "images/picks/2026-11-17/EKCH.jpg"
+      "photo": "images/picks/2026-11-18/HAAB.jpg"
+    },
+    {
+      "icao": "CYQQ",
+      "role": "scenic",
+      "name": "Comox Valley International Airport / CFB Comox",
+      "city": "Comox",
+      "country": "CA",
+      "elev": 26,
+      "rwy": 3048,
+      "score": 95.4,
+      "weather": {
+        "text": "晴",
+        "temp": 6,
+        "cloud": 4,
+        "vis": 14500,
+        "wind": 3,
+        "isDay": false,
+        "code": 0
+      },
+      "photo": "images/picks/2026-11-18/CYQQ.jpg"
     }
   ],
   "history": [
-    "VGHS",
-    "KSBA",
-    "CYOA",
     "ZBAA",
     "CYXC",
     "KSSI",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYDF",
     "ZWWW",
     "VQPR",
-    "EKCH"
+    "EKCH",
+    "VCBI",
+    "HAAB",
+    "CYQQ"
   ]
 };
