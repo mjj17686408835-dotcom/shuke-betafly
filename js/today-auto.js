@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-18",
-  "generated": "2026-11-18T03:12:30.394Z",
-  "icao": "VCBI",
+  "date": "2026-11-19",
+  "generated": "2026-11-19T02:52:05.982Z",
+  "icao": "ZSSS",
   "picks": [
     {
-      "icao": "VCBI",
+      "icao": "ZSSS",
       "role": "hub",
-      "name": "Bandaranaike International Colombo Airport",
-      "city": "Colombo",
-      "country": "LK",
-      "elev": 9,
-      "rwy": 3350,
-      "score": 116.7,
+      "name": "Shanghai Hongqiao International Airport",
+      "city": "Shanghai (Minhang)",
+      "country": "CN",
+      "elev": 3,
+      "rwy": 3400,
+      "score": 127.2,
       "weather": {
         "text": "晴",
-        "temp": 28,
-        "cloud": 2,
-        "vis": 20560,
-        "wind": 8,
+        "temp": 9,
+        "cloud": 0,
+        "vis": 28860,
+        "wind": 12,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/picks/2026-11-18/VCBI.jpg"
+      "photo": "images/airports/ZSSS.jpg"
     },
     {
-      "icao": "HAAB",
+      "icao": "KASE",
       "role": "challenge",
-      "name": "Addis Ababa Bole International Airport",
-      "city": "Addis Ababa",
-      "country": "ET",
-      "elev": 2326,
-      "rwy": 3800,
-      "score": 119.7,
+      "name": "Aspen-Pitkin County Airport (Sardy Field)",
+      "city": "Aspen",
+      "country": "US",
+      "elev": 2384,
+      "rwy": 2440,
+      "score": 109.8,
       "weather": {
         "text": "晴",
-        "temp": 12,
-        "cloud": 9,
-        "vis": 31500,
-        "wind": 0,
+        "temp": -2,
+        "cloud": 0,
+        "vis": 45300,
+        "wind": 8,
         "isDay": false,
         "code": 0
       },
-      "photo": "images/picks/2026-11-18/HAAB.jpg"
+      "photo": "images/airports/KASE.jpg"
     },
     {
-      "icao": "CYQQ",
+      "icao": "CYOA",
       "role": "scenic",
-      "name": "Comox Valley International Airport / CFB Comox",
-      "city": "Comox",
+      "name": "Ekati Airport",
+      "city": "Ekati",
       "country": "CA",
-      "elev": 26,
-      "rwy": 3048,
-      "score": 95.4,
+      "elev": 468,
+      "rwy": 1954,
+      "score": 99.3,
       "weather": {
         "text": "晴",
-        "temp": 6,
-        "cloud": 4,
-        "vis": 14500,
-        "wind": 3,
+        "temp": -20,
+        "cloud": 0,
+        "vis": 90880,
+        "wind": 9,
         "isDay": false,
         "code": 0
       },
-      "photo": "images/picks/2026-11-18/CYQQ.jpg"
+      "photo": "images/picks/2026-11-19/CYOA.jpg"
     }
   ],
   "history": [
-    "ZBAA",
-    "CYXC",
-    "KSSI",
     "VNKT",
     "LGSK",
     "CYQT",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "EKCH",
     "VCBI",
     "HAAB",
-    "CYQQ"
+    "CYQQ",
+    "ZSSS",
+    "KASE",
+    "CYOA"
   ]
 };
