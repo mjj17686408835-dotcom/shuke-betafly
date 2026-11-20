@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-19",
-  "generated": "2026-11-19T02:52:05.982Z",
-  "icao": "ZSSS",
+  "date": "2026-11-20",
+  "generated": "2026-11-20T02:43:43.480Z",
+  "icao": "ZBAA",
   "picks": [
     {
-      "icao": "ZSSS",
+      "icao": "ZBAA",
       "role": "hub",
-      "name": "Shanghai Hongqiao International Airport",
-      "city": "Shanghai (Minhang)",
+      "name": "Beijing Capital International Airport",
+      "city": "Beijing",
       "country": "CN",
-      "elev": 3,
-      "rwy": 3400,
-      "score": 127.2,
+      "elev": 35,
+      "rwy": 3800,
+      "score": 128.7,
       "weather": {
         "text": "晴",
-        "temp": 9,
-        "cloud": 0,
-        "vis": 28860,
-        "wind": 12,
+        "temp": 4,
+        "cloud": 5,
+        "vis": 21360,
+        "wind": 1,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/ZSSS.jpg"
+      "photo": "images/airports/ZBAA.jpg"
     },
     {
-      "icao": "KASE",
+      "icao": "LXGB",
       "role": "challenge",
-      "name": "Aspen-Pitkin County Airport (Sardy Field)",
-      "city": "Aspen",
-      "country": "US",
-      "elev": 2384,
-      "rwy": 2440,
-      "score": 109.8,
+      "name": "Gibraltar Airport",
+      "city": "Gibraltar",
+      "country": "GI",
+      "elev": 4,
+      "rwy": 1829,
+      "score": 102.9,
       "weather": {
-        "text": "晴",
-        "temp": -2,
-        "cloud": 0,
-        "vis": 45300,
-        "wind": 8,
+        "text": "大部晴朗",
+        "temp": 13,
+        "cloud": 4,
+        "vis": 27940,
+        "wind": 6,
         "isDay": false,
-        "code": 0
+        "code": 1
       },
-      "photo": "images/airports/KASE.jpg"
+      "photo": "images/airports/LXGB.jpg"
     },
     {
-      "icao": "CYOA",
+      "icao": "CYQU",
       "role": "scenic",
-      "name": "Ekati Airport",
-      "city": "Ekati",
+      "name": "Grande Prairie Airport",
+      "city": "Grande Prairie",
       "country": "CA",
-      "elev": 468,
-      "rwy": 1954,
-      "score": 99.3,
+      "elev": 669,
+      "rwy": 2591,
+      "score": 80.6,
       "weather": {
-        "text": "晴",
-        "temp": -20,
-        "cloud": 0,
-        "vis": 90880,
-        "wind": 9,
+        "text": "大部晴朗",
+        "temp": -2,
+        "cloud": 25,
+        "vis": 38680,
+        "wind": 10,
         "isDay": false,
-        "code": 0
+        "code": 1
       },
-      "photo": "images/picks/2026-11-19/CYOA.jpg"
+      "photo": "images/picks/2026-11-20/CYQU.jpg"
     }
   ],
   "history": [
-    "VNKT",
-    "LGSK",
-    "CYQT",
     "VIDP",
     "CYGK",
     "EGPN",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYQQ",
     "ZSSS",
     "KASE",
-    "CYOA"
+    "CYOA",
+    "ZBAA",
+    "LXGB",
+    "CYQU"
   ]
 };
