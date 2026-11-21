@@ -1,7 +1,223 @@
 /* 由 scripts/fetch-scenery.mjs 自动生成，请勿手改。
-   抓取时间：2026-11-20T02:49:12.771Z
-   条目数：83 */
+   抓取时间：2026-11-21T02:58:15.191Z
+   条目数：88 */
 const SCENERY_AUTO = [
+  {
+    "airport": "KCMR",
+    "title": "Burning Blue Design – KCMR H.A. Clark Memorial Field / Williams Airport",
+    "author": "Burning Blue Design",
+    "version": "v2.5.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/9c45f83fe6e6a5082e02d6945e925066da51c384.jpg",
+    "url": "https://sceneryaddons.org/burning-blue-design-kcmr-h-a-clark-memorial-field-williams-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGBT",
+    "title": "Burning Blue Design – EGBT Turweston Airport",
+    "author": "Burning Blue Design",
+    "version": "v2.5.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/09/405e74ab5337939be90a871272f2a108c7d1ec46.jpg",
+    "url": "https://sceneryaddons.org/burning-blue-design-egbt-turweston-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGBM",
+    "title": "Burning Blue Design – EGBM Tatenhill Airport",
+    "author": "Burning Blue Design",
+    "version": "v2.5.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/fd706d163702c0c6a4797493cc568d29a472cb15.jpg",
+    "url": "https://sceneryaddons.org/burning-blue-design-egbm-tatenhill-airport-msfs-2024/"
+  },
+  {
+    "airport": "KARR",
+    "title": "UK2000 Scenery – KARR Aurora Municipal Airport",
+    "author": "UK2000 Scenery",
+    "version": "v1.4.1",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/b1cc70e4e4ae88592a7e295934912d625e7b05c5-1280x720.jpg",
+    "url": "https://sceneryaddons.org/uk2000-scenery-karr-aurora-municipal-airport/"
+  },
+  {
+    "airport": "",
+    "title": "NetDesign – CRL2 Westport / Rideau Lakes Airport",
+    "author": "NetDesign",
+    "version": "v2.2.1",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/05/b88d8c656f5cb325c6dc505df4b301327649b589.jpg",
+    "url": "https://sceneryaddons.org/netdesign-crl2-westport-rideau-lakes-airport-msfs-2024/"
+  },
+  {
+    "airport": "EHSE",
+    "title": "SimPixel – EHSE Breda International Airport",
+    "author": "SimPixel",
+    "version": "v2.0.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/03/ee16fba43e390aea728714663fcebe30a2c0ac53.jpg",
+    "url": "https://sceneryaddons.org/simpixel-ehse-breda-international-airport/"
+  },
+  {
+    "airport": "LEMH",
+    "title": "sim–wings – LEMH Menorca Airport",
+    "author": "sim–wings",
+    "version": "v1.2.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/944321a56984b3214fe4861c869b1b656c2c9147.jpg",
+    "url": "https://sceneryaddons.org/sim-wings-lemh-menorca-airport/"
+  },
+  {
+    "airport": "LEIB",
+    "title": "sim–wings – LEIB Ibiza Airport",
+    "author": "sim–wings",
+    "version": "v2.2.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/1f52ac7b7c2272482bddcdc1c8022119766470ef.jpg",
+    "url": "https://sceneryaddons.org/sim-wings-leib-ibiza-airport/"
+  },
+  {
+    "airport": "KGPT",
+    "title": "Fly 2 High – KGPT Gulfport–Biloxi International Airport",
+    "author": "Fly 2 High",
+    "version": "v2.0.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/09/62536be57b88357ca4ba1c1eefd7b5ecfa408f30.jpg",
+    "url": "https://sceneryaddons.org/fly-2-high-kgpt-gulfport-biloxi-international-airport/"
+  },
+  {
+    "airport": "KFAT",
+    "title": "Fly 2 High – KFAT Fresno Yosemite International Airport",
+    "author": "Fly 2 High",
+    "version": "v3.2.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/04/b66ad486f56186c5a8c34457e0448f8b2c63a930.jpg",
+    "url": "https://sceneryaddons.org/fly-2-high-kfat-fresno-yosemite-international-airport/"
+  },
+  {
+    "airport": "KBLI",
+    "title": "Fly 2 High – KBLI Bellingham International Airport",
+    "author": "Fly 2 High",
+    "version": "v3.5.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/9666449f83580659593a8e666ffcfdc9a4cb3324.jpg",
+    "url": "https://sceneryaddons.org/fly-2-high-kbli-bellingham-international-airport/"
+  },
+  {
+    "airport": "ESNS",
+    "title": "SkyMatrix Studios – ESNS Skelleftea Airport",
+    "author": "SkyMatrix Studios",
+    "version": "v1.0.3",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/fed964fec7c200110bb5c9f42f2f6f12ae51af1b.jpg",
+    "url": "https://sceneryaddons.org/skymatrix-studios-esns-skelleftea-airport/"
+  },
+  {
+    "airport": "EGGW",
+    "title": "iniBuilds – EGGW Luton Airport",
+    "author": "iniBuilds",
+    "version": "v1.1.2",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/5b662ce4c45ca896d4fd31fd20b07986a31074c2.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-eggw-luton-airport-msfs-2024/"
+  },
+  {
+    "airport": "KLAX",
+    "title": "iniBuilds – KLAX Los Angeles International Airport, KLVB Venice Beach & 58CA Hooper Heliport",
+    "author": "iniBuilds",
+    "version": "v1.0.4",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/05/082cc70ca03a132cf2c16ddab45cf951a593f842.jpg",
+    "url": "https://sceneryaddons.org/inibuilds-klax-los-angeles-international-airport-klvb-venice-beach-58ca-hooper-heliport-msfs-2024/"
+  },
+  {
+    "airport": "KMIA",
+    "title": "MK–STUDIOS – KMIA Miami International Airport",
+    "author": "MK–STUDIOS",
+    "version": "v1.0.3",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/48e14f38e112ae39ce71b7303de9dcb97e7b4bdc.jpg",
+    "url": "https://sceneryaddons.org/mk-studios-kmia-miami-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "KFLL",
+    "title": "MK–STUDIOS – KFLL Fort Lauderdale–Hollywood International Airport",
+    "author": "MK–STUDIOS",
+    "version": "v1.1.1",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/05/a930b25d7547e18ed9a66d6ea8009d5eb35d6f0e.jpg",
+    "url": "https://sceneryaddons.org/mk-studios-kfll-fort-lauderdale-hollywood-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "KEYW",
+    "title": "MK–STUDIOS – KEYW Key West International Airport",
+    "author": "MK–STUDIOS",
+    "version": "v1.1.1",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/02/a47614a247507ef8d4dd984a2c80dbdf1116a655.jpg",
+    "url": "https://sceneryaddons.org/mk-studios-keyw-key-west-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "KPDX",
+    "title": "Flightbeam Studios – KPDX Portland International Airport",
+    "author": "Flightbeam Studios",
+    "version": "v2.4.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/03/ce808c8a806f0d047c85692ec184a516e6e3cf99.jpg",
+    "url": "https://sceneryaddons.org/flightbeam-studios-kpdx-portland-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "UIII",
+    "title": "Siberian Scenery Development – UIII Irkutsk International Airport v1.2.0 MSFS 2020/2024",
+    "author": "Siberian Scenery Development",
+    "version": "v1.2.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/08eaa6dac3807aa5b0bee8e5a6056b5b15a18e6c.jpg",
+    "url": "https://sceneryaddons.org/siberian-scenery-development-uiii-irkutsk-international-airport/"
+  },
+  {
+    "airport": "KXTA",
+    "title": "Miltech Simulations – KXTA Homey Airport / Tonopah Test Range and Area 51",
+    "author": "Miltech Simulations",
+    "version": "v1.0.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/ea440f91788dcb8cd138843e6e56e589180d2bec.jpg",
+    "url": "https://sceneryaddons.org/miltech-simulations-kxta-homey-airport-tonopah-test-range-and-area-51/"
+  },
+  {
+    "airport": "EGKG",
+    "title": "Burning Blue Design – EGKG / EGKF Kittyhawk Airport",
+    "author": "Burning Blue Design",
+    "version": "v1.5.2",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/53734486bdeaba49f611401498bb6a8215cb38a9.jpg",
+    "url": "https://sceneryaddons.org/burning-blue-design-egkg-egkf-kittyhawk-airport-msfs-2024/"
+  },
+  {
+    "airport": "CYXY",
+    "title": "Tailwind Studios – CYXY Erik Nielsen Whitehorse International Airport",
+    "author": "Tailwind Studios",
+    "version": "v1.0.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/22a681f45db4e92d6adcbff4c7a7d58579ca1a52.jpg",
+    "url": "https://sceneryaddons.org/tailwind-studios-cyxy-erik-nielsen-whitehorse-international-airport/"
+  },
+  {
+    "airport": "KSNA",
+    "title": "Verticalsim – KSNA John Wayne Airport",
+    "author": "Verticalsim",
+    "version": "v1.0.0",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/0bf09bc1a0498547c28a3e056602ad20c24815ec.jpg",
+    "url": "https://sceneryaddons.org/verticalsim-ksna-john-wayne-airport-msfs-2024/"
+  },
+  {
+    "airport": "LGTS",
+    "title": "Lisium – LGTS Thessaloniki Airport",
+    "author": "Lisium",
+    "version": "v1.0.1",
+    "date": "2026-11-20",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/88e257a3797f1c458dbf279209d4ed431bcd4510.jpg",
+    "url": "https://sceneryaddons.org/lisium-lgts-thessaloniki-airport-msfs-2024/"
+  },
   {
     "airport": "LIRN",
     "title": "RDPresets – LIRN Naples International Airport v1.0.0 (Fixed)",
@@ -208,15 +424,6 @@ const SCENERY_AUTO = [
     "date": "2026-11-05",
     "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/6ddc7cc67c25a2658b5f362db14ddde6a88d8b4b.jpg",
     "url": "https://sceneryaddons.org/inibuilds-kmsy-louis-armstrong-new-orleans-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYGZ",
-    "title": "Simaddons – CYGZ Grise Fiord Airport, CYEU Eureka Airport & CYLT Alert Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/02/ba69676ad33bdfbd84b041e59879c65c68a9e867.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cygz-grise-fiord-airport-cyeu-eureka-airport-cylt-alert-airport-msfs-2024/"
   },
   {
     "airport": "CYRT",
@@ -489,15 +696,6 @@ const SCENERY_AUTO = [
     "url": "https://sceneryaddons.org/photorico-scenery-tjsj-luis-munoz-marin-international-airport-msfs-2024/"
   },
   {
-    "airport": "ESNS",
-    "title": "SkyMatrix Studios – ESNS Skelleftea Airport",
-    "author": "SkyMatrix Studios",
-    "version": "v1.0.2",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/fed964fec7c200110bb5c9f42f2f6f12ae51af1b.jpg",
-    "url": "https://sceneryaddons.org/skymatrix-studios-esns-skelleftea-airport/"
-  },
-  {
     "airport": "LGSK",
     "title": "M&#8217;M SIMULATIONS – LGSK Skiathos International Airport",
     "author": "M&#8217;M SIMULATIONS",
@@ -595,158 +793,5 @@ const SCENERY_AUTO = [
     "date": "2026-11-04",
     "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/6cec5e696b49afbd0289fa6115acf09d30ebe527.jpg",
     "url": "https://sceneryaddons.org/gaya-simulations-ksba-santa-barbara-municipal-airport-msfs-2024/"
-  },
-  {
-    "airport": "LIPZ",
-    "title": "Atelic – LIPZ Venice Marco Polo Airport",
-    "author": "Atelic",
-    "version": "v1.0.4",
-    "date": "2026-10-24",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/f92e1d5c1a4bcad672cfd7da2b63771a8a627985.jpg",
-    "url": "https://sceneryaddons.org/atelic-lipz-venice-marco-polo-airport-msfs-2024/"
-  },
-  {
-    "airport": "KMIA",
-    "title": "MK–STUDIOS – KMIA Miami International Airport",
-    "author": "MK–STUDIOS",
-    "version": "v1.0.2",
-    "date": "2026-10-24",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/48e14f38e112ae39ce71b7303de9dcb97e7b4bdc.jpg",
-    "url": "https://sceneryaddons.org/mk-studios-kmia-miami-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "GCXO",
-    "title": "Wolkenblau – GCXO Tenerife North Airport",
-    "author": "Wolkenblau",
-    "version": "v1.3.2",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/07/125a5835990e97efd41dbc31abfcca6c7c0a211e.jpg",
-    "url": "https://sceneryaddons.org/wolkenblau-gcxo-tenerife-north-airport/"
-  },
-  {
-    "airport": "EGPN",
-    "title": "UK2000 Scenery – EGPN Dundee Airport",
-    "author": "UK2000 Scenery",
-    "version": "v1.0.2",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/07/dc2bc9d7977ce9b9a5bad4c76b09316e089f0834.jpg",
-    "url": "https://sceneryaddons.org/uk2000-scenery-egpn-dundee-airport/"
-  },
-  {
-    "airport": "EGSP",
-    "title": "Burning Blue Design – EGSP Peterborough/Sibson Airport",
-    "author": "Burning Blue Design",
-    "version": "v2.5.0",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/0bc87b651b5466eab0f61ef46ae695ea08081d50.jpg",
-    "url": "https://sceneryaddons.org/burning-blue-design-egsp-peterborough-sibson-airport-msfs-2024/"
-  },
-  {
-    "airport": "EYKA",
-    "title": "Propair Flight – EYKA Kaunas Airport",
-    "author": "Propair Flight",
-    "version": "v2.0.0",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/04/cae53d0fd51aa331581d7b8702f46a95b321117b.jpg",
-    "url": "https://sceneryaddons.org/propair-flight-eyka-kaunas-airport-msfs-2024/"
-  },
-  {
-    "airport": "EBCI",
-    "title": "Propair Flight – EBCI Brussels South Charleroi Airport",
-    "author": "Propair Flight",
-    "version": "v1.3.0",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/04/992b03df4b8430b6a2d1eccf18251a88a7a81690.jpg",
-    "url": "https://sceneryaddons.org/propair-flight-ebci-brussels-south-charleroi-airport-msfs-2024/"
-  },
-  {
-    "airport": "EKAH",
-    "title": "SimNord – EKAH Aarhus Airport",
-    "author": "SimNord",
-    "version": "v1.1.2",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/c9c291f26f30371f2847fe15f02d5559ff8e55ca.jpg",
-    "url": "https://sceneryaddons.org/simnord-ekah-aarhus-airport-msfs-2024/"
-  },
-  {
-    "airport": "EKCH",
-    "title": "SimNord – EKCH Copenhagen Kastrup International Airport",
-    "author": "SimNord",
-    "version": "v1.0.7",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/09/ac4075f8c58a69ea725d9b79fdf2314ce716cf72.jpg",
-    "url": "https://sceneryaddons.org/simnord-ekch-copenhagen-kastrup-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "MFSG",
-    "title": "MFSG – YPDN Darwin International Airport",
-    "author": "MFSG",
-    "version": "v1.0.0",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/f374876ba5897244030b4935b9dc6c397a5224f0.jpg",
-    "url": "https://sceneryaddons.org/mfsg-ypdn-darwin-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "HAAB",
-    "title": "iniBuilds – HAAB Addis Ababa Bole International Airport",
-    "author": "iniBuilds",
-    "version": "v1.0.1",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/ccc34dc12b5c86c2374622f727af3865c383b95e.jpg",
-    "url": "https://sceneryaddons.org/inibuilds-haab-addis-ababa-bole-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "MYGF",
-    "title": "WingSim – MYGF Grand Bahama / Freeport International Airport",
-    "author": "WingSim",
-    "version": "v1.0.0",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/d9389892e6babbac43bf1f3b8cca63be4d6f9c05.jpg",
-    "url": "https://sceneryaddons.org/wingsim-mygf-grand-bahama-freeport-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "SUMU",
-    "title": "TropicalSim – SUMU Carrasco / Montevideo International Airport",
-    "author": "TropicalSim",
-    "version": "v1.1.1",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/9e610a5cc089728d3a1b9b8e3909bab6e863ce96.jpg",
-    "url": "https://sceneryaddons.org/tropicalsim-sumu-carrasco-montevideo-international-airport/"
-  },
-  {
-    "airport": "KSTL",
-    "title": "Realworld Scenery – KSTL St. Louis Lambert International Airport",
-    "author": "Realworld Scenery",
-    "version": "v4.1.0",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/fe816c53c3a3cf3406a6c863ead042a9a3f2613c.jpg",
-    "url": "https://sceneryaddons.org/realworld-scenery-kstl-st-louis-lambert-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "KSEZ",
-    "title": "X–Codr Designs – KSEZ Sedona Airport",
-    "author": "X–Codr Designs",
-    "version": "v1.0.1",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/f3c71d6cfc5aed8f052848b53a6ebf3a2ba615c8.jpg",
-    "url": "https://sceneryaddons.org/x-codr-designs-ksez-sedona-airport-msfs-2024/"
-  },
-  {
-    "airport": "EGTK",
-    "title": "Cloudberry Creations – EGTK Oxford Airport",
-    "author": "Cloudberry Creations",
-    "version": "v1.1.1",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/de73034152d859c9e645b9cdd7d81dc6a3ad803e.jpg",
-    "url": "https://sceneryaddons.org/cloudberry-creations-egtk-oxford-airport-msfs-2024/"
-  },
-  {
-    "airport": "KHOU",
-    "title": "Fly 2 High – KHOU Houston William P. Hobby Airport",
-    "author": "Fly 2 High",
-    "version": "v1.1.0",
-    "date": "2026-10-23",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/10/d5b9e46416b5a00ea479ef103e14ae9792c7d961.jpg",
-    "url": "https://sceneryaddons.org/fly-2-high-khou-houston-william-p-hobby-airport-msfs-2024/"
   }
 ];
