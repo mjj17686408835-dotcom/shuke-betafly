@@ -1,7 +1,34 @@
 /* 由 scripts/fetch-scenery.mjs 自动生成，请勿手改。
-   抓取时间：2026-11-22T01:53:04.829Z
+   抓取时间：2026-11-23T02:10:40.769Z
    条目数：88 */
 const SCENERY_AUTO = [
+  {
+    "airport": "ZSSS",
+    "title": "WF Scenery Studio – ZSSS Shanghai Hongqiao International Airport",
+    "author": "WF Scenery Studio",
+    "version": "v1.1.0",
+    "date": "2026-11-22",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/01/6951b564a0745f2e5aa4168ca76d53bae858fc48.jpg",
+    "url": "https://sceneryaddons.org/wf-scenery-studio-zsss-shanghai-hongqiao-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "WSSS",
+    "title": "CloudSurf Asia Simulations – WSSS Singapore Changi Airport",
+    "author": "CloudSurf Asia Simulations",
+    "version": "v1.0.2",
+    "date": "2026-11-22",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/f319a99f5c7a1a6878d5494aa372b79ac99576be.jpg",
+    "url": "https://sceneryaddons.org/cloudsurf-asia-simulations-wsss-singapore-changi-airport-msfs-2024/"
+  },
+  {
+    "airport": "LIPZ",
+    "title": "Aerosoft – LIPZ Venice Marco Polo Airport",
+    "author": "Aerosoft",
+    "version": "v1.0.0",
+    "date": "2026-11-22",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/d99a63070269ea8ca7cb868a97f9e158df854dbd.jpg",
+    "url": "https://sceneryaddons.org/aerosoft-lipz-venice-marco-polo-airport-msfs-2024/"
+  },
   {
     "airport": "KCMR",
     "title": "Burning Blue Design – KCMR H.A. Clark Memorial Field / Williams Airport",
@@ -424,33 +451,6 @@ const SCENERY_AUTO = [
     "date": "2026-11-05",
     "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/6ddc7cc67c25a2658b5f362db14ddde6a88d8b4b.jpg",
     "url": "https://sceneryaddons.org/inibuilds-kmsy-louis-armstrong-new-orleans-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYRT",
-    "title": "Simaddons – CYRT Rankin Inlet Airport & CMB2 Meadowbank Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/02/40206c7bf60684251e5b1c29277fa3ebd693b685.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyrt-rankin-inlet-airport-cmb2-meadowbank-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYOA",
-    "title": "Simaddons – CYOA Ekati Airport & CDK2 Diavik Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/03/b529dee65ebb4b943285ba60124983961e647249.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyoa-ekati-airport-cdk2-diavik-airport-msfs-2024/"
-  },
-  {
-    "airport": "LIMW",
-    "title": "Simaddons – LIMW Aosta Valley Airport v1.0.1 (Update 2)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/02/f4bd760854f50b2f05443a48398e251d1764b4cc.jpg",
-    "url": "https://sceneryaddons.org/simaddons-limw-aosta-valley-airport-msfs-2024/"
   },
   {
     "airport": "LFVP",
