@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-20",
-  "generated": "2026-11-20T02:43:43.480Z",
-  "icao": "ZBAA",
+  "date": "2026-11-23",
+  "generated": "2026-11-23T02:03:25.283Z",
+  "icao": "VNKT",
   "picks": [
     {
-      "icao": "ZBAA",
+      "icao": "VNKT",
       "role": "hub",
-      "name": "Beijing Capital International Airport",
-      "city": "Beijing",
-      "country": "CN",
-      "elev": 35,
-      "rwy": 3800,
-      "score": 128.7,
+      "name": "Tribhuvan International Airport",
+      "city": "Kathmandu",
+      "country": "NP",
+      "elev": 1338,
+      "rwy": 3350,
+      "score": 119.3,
       "weather": {
         "text": "晴",
-        "temp": 4,
-        "cloud": 5,
-        "vis": 21360,
-        "wind": 1,
+        "temp": 10,
+        "cloud": 0,
+        "vis": 7600,
+        "wind": 4,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/ZBAA.jpg"
+      "photo": "images/airports/VNKT.jpg"
     },
     {
-      "icao": "LXGB",
+      "icao": "KEYW",
       "role": "challenge",
-      "name": "Gibraltar Airport",
-      "city": "Gibraltar",
-      "country": "GI",
-      "elev": 4,
-      "rwy": 1829,
+      "name": "Key West International Airport",
+      "city": "Key West",
+      "country": "US",
+      "elev": 1,
+      "rwy": 1547,
       "score": 102.9,
       "weather": {
-        "text": "大部晴朗",
-        "temp": 13,
-        "cloud": 4,
-        "vis": 27940,
-        "wind": 6,
+        "text": "晴",
+        "temp": 23,
+        "cloud": 0,
+        "vis": 18400,
+        "wind": 9,
         "isDay": false,
-        "code": 1
+        "code": 0
       },
-      "photo": "images/airports/LXGB.jpg"
+      "photo": "images/picks/2026-11-23/KEYW.jpg"
     },
     {
-      "icao": "CYQU",
+      "icao": "LGSK",
       "role": "scenic",
-      "name": "Grande Prairie Airport",
-      "city": "Grande Prairie",
-      "country": "CA",
-      "elev": 669,
-      "rwy": 2591,
-      "score": 80.6,
+      "name": "Skiathos Island National Airport",
+      "city": "Skiathos",
+      "country": "GR",
+      "elev": 16,
+      "rwy": 1628,
+      "score": 98.1,
       "weather": {
         "text": "大部晴朗",
-        "temp": -2,
-        "cloud": 25,
-        "vis": 38680,
-        "wind": 10,
+        "temp": 18,
+        "cloud": 36,
+        "vis": 39340,
+        "wind": 15,
         "isDay": false,
         "code": 1
       },
-      "photo": "images/picks/2026-11-20/CYQU.jpg"
+      "photo": "images/picks/2026-11-23/LGSK.jpg"
     }
   ],
   "history": [
-    "VIDP",
-    "CYGK",
-    "EGPN",
     "SUMU",
     "MGGT",
     "CYRT",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYOA",
     "ZBAA",
     "LXGB",
-    "CYQU"
+    "CYQU",
+    "VNKT",
+    "KEYW",
+    "LGSK"
   ]
 };
