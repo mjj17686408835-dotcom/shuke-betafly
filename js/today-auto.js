@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-23",
-  "generated": "2026-11-23T02:03:25.283Z",
-  "icao": "VNKT",
+  "date": "2026-11-24",
+  "generated": "2026-11-24T05:39:50.755Z",
+  "icao": "OMDB",
   "picks": [
     {
-      "icao": "VNKT",
+      "icao": "OMDB",
       "role": "hub",
-      "name": "Tribhuvan International Airport",
-      "city": "Kathmandu",
-      "country": "NP",
-      "elev": 1338,
-      "rwy": 3350,
-      "score": 119.3,
+      "name": "Dubai International Airport",
+      "city": "Dubai",
+      "country": "AE",
+      "elev": 19,
+      "rwy": 4447,
+      "score": 113,
       "weather": {
         "text": "晴",
-        "temp": 10,
+        "temp": 26,
         "cloud": 0,
-        "vis": 7600,
-        "wind": 4,
+        "vis": 27920,
+        "wind": 6,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/VNKT.jpg"
+      "photo": "images/picks/2026-11-24/OMDB.jpg"
     },
     {
-      "icao": "KEYW",
+      "icao": "KSNA",
       "role": "challenge",
-      "name": "Key West International Airport",
-      "city": "Key West",
+      "name": "John Wayne Orange County International Airport",
+      "city": "Santa Ana",
       "country": "US",
-      "elev": 1,
-      "rwy": 1547,
+      "elev": 17,
+      "rwy": 1737,
       "score": 102.9,
       "weather": {
         "text": "晴",
-        "temp": 23,
-        "cloud": 0,
-        "vis": 18400,
-        "wind": 9,
+        "temp": 15,
+        "cloud": 16,
+        "vis": 31200,
+        "wind": 6,
         "isDay": false,
         "code": 0
       },
-      "photo": "images/picks/2026-11-23/KEYW.jpg"
+      "photo": "images/picks/2026-11-24/KSNA.jpg"
     },
     {
-      "icao": "LGSK",
+      "icao": "CYFB",
       "role": "scenic",
-      "name": "Skiathos Island National Airport",
-      "city": "Skiathos",
-      "country": "GR",
-      "elev": 16,
-      "rwy": 1628,
-      "score": 98.1,
+      "name": "Iqaluit Airport",
+      "city": "Iqaluit",
+      "country": "CA",
+      "elev": 34,
+      "rwy": 2623,
+      "score": 99.3,
       "weather": {
-        "text": "大部晴朗",
-        "temp": 18,
-        "cloud": 36,
-        "vis": 39340,
-        "wind": 15,
+        "text": "晴",
+        "temp": -23,
+        "cloud": 0,
+        "vis": 88080,
+        "wind": 13,
         "isDay": false,
-        "code": 1
+        "code": 0
       },
-      "photo": "images/picks/2026-11-23/LGSK.jpg"
+      "photo": "images/picks/2026-11-24/CYFB.jpg"
     }
   ],
   "history": [
-    "SUMU",
-    "MGGT",
-    "CYRT",
     "RPVM",
     "EGTK",
     "EKAH",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYQU",
     "VNKT",
     "KEYW",
-    "LGSK"
+    "LGSK",
+    "OMDB",
+    "KSNA",
+    "CYFB"
   ]
 };
