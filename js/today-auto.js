@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-24",
-  "generated": "2026-11-24T05:39:50.755Z",
-  "icao": "OMDB",
+  "date": "2026-11-25",
+  "generated": "2026-11-25T04:38:53.682Z",
+  "icao": "OTHH",
   "picks": [
     {
-      "icao": "OMDB",
+      "icao": "OTHH",
       "role": "hub",
-      "name": "Dubai International Airport",
-      "city": "Dubai",
-      "country": "AE",
-      "elev": 19,
-      "rwy": 4447,
+      "name": "Hamad International Airport",
+      "city": "Doha",
+      "country": "QA",
+      "elev": 4,
+      "rwy": 4850,
       "score": 113,
       "weather": {
         "text": "晴",
-        "temp": 26,
+        "temp": 23,
         "cloud": 0,
-        "vis": 27920,
-        "wind": 6,
+        "vis": 17780,
+        "wind": 5,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/picks/2026-11-24/OMDB.jpg"
+      "photo": "images/picks/2026-11-25/OTHH.jpg"
     },
     {
-      "icao": "KSNA",
+      "icao": "ZPPP",
       "role": "challenge",
-      "name": "John Wayne Orange County International Airport",
-      "city": "Santa Ana",
-      "country": "US",
-      "elev": 17,
-      "rwy": 1737,
-      "score": 102.9,
+      "name": "Kunming Changshui International Airport",
+      "city": "Kunming",
+      "country": "CN",
+      "elev": 2104,
+      "rwy": 4500,
+      "score": 110.6,
       "weather": {
-        "text": "晴",
-        "temp": 15,
-        "cloud": 16,
-        "vis": 31200,
-        "wind": 6,
-        "isDay": false,
-        "code": 0
+        "text": "多云",
+        "temp": 11,
+        "cloud": 72,
+        "vis": 29600,
+        "wind": 14,
+        "isDay": true,
+        "code": 2
       },
-      "photo": "images/picks/2026-11-24/KSNA.jpg"
+      "photo": "images/airports/ZPPP.jpg"
     },
     {
-      "icao": "CYFB",
+      "icao": "CYQT",
       "role": "scenic",
-      "name": "Iqaluit Airport",
-      "city": "Iqaluit",
+      "name": "Thunder Bay International Airport",
+      "city": "Thunder Bay",
       "country": "CA",
-      "elev": 34,
-      "rwy": 2623,
-      "score": 99.3,
+      "elev": 199,
+      "rwy": 2231,
+      "score": 98.4,
       "weather": {
         "text": "晴",
-        "temp": -23,
+        "temp": -11,
         "cloud": 0,
-        "vis": 88080,
-        "wind": 13,
+        "vis": 16400,
+        "wind": 7,
         "isDay": false,
         "code": 0
       },
-      "photo": "images/picks/2026-11-24/CYFB.jpg"
+      "photo": "images/picks/2026-11-25/CYQT.jpg"
     }
   ],
   "history": [
-    "RPVM",
-    "EGTK",
-    "EKAH",
     "VHHH",
     "NZQN",
     "CYVP",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "LGSK",
     "OMDB",
     "KSNA",
-    "CYFB"
+    "CYFB",
+    "OTHH",
+    "ZPPP",
+    "CYQT"
   ]
 };
