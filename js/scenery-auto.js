@@ -1,5 +1,5 @@
 /* 由 scripts/fetch-scenery.mjs 自动生成，请勿手改。
-   抓取时间：2026-11-24T05:43:46.776Z
+   抓取时间：2026-11-25T04:45:33.283Z
    条目数：88 */
 const SCENERY_AUTO = [
   {
