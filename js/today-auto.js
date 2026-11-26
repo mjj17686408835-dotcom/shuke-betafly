@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-25",
-  "generated": "2026-11-25T04:38:53.682Z",
-  "icao": "OTHH",
+  "date": "2026-11-26",
+  "generated": "2026-11-26T03:49:51.958Z",
+  "icao": "KDFW",
   "picks": [
     {
-      "icao": "OTHH",
+      "icao": "KDFW",
       "role": "hub",
-      "name": "Hamad International Airport",
-      "city": "Doha",
-      "country": "QA",
-      "elev": 4,
-      "rwy": 4850,
-      "score": 113,
+      "name": "Dallas Fort Worth International Airport",
+      "city": "Dallas-Fort Worth",
+      "country": "US",
+      "elev": 185,
+      "rwy": 4085,
+      "score": 105.8,
       "weather": {
         "text": "晴",
-        "temp": 23,
+        "temp": 5,
         "cloud": 0,
-        "vis": 17780,
-        "wind": 5,
+        "vis": 38700,
+        "wind": 12,
+        "isDay": false,
+        "code": 0
+      },
+      "photo": "images/picks/2026-11-26/KDFW.jpg"
+    },
+    {
+      "icao": "ZULS",
+      "role": "challenge",
+      "name": "Lhasa Gonggar International Airport",
+      "city": "Shannan (Gonggar)",
+      "country": "CN",
+      "elev": 3570,
+      "rwy": 4000,
+      "score": 88.9,
+      "weather": {
+        "text": "晴",
+        "temp": 6,
+        "cloud": 0,
+        "vis": 49360,
+        "wind": 3,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/picks/2026-11-25/OTHH.jpg"
+      "photo": "images/airports/ZULS.jpg"
     },
     {
-      "icao": "ZPPP",
-      "role": "challenge",
-      "name": "Kunming Changshui International Airport",
-      "city": "Kunming",
-      "country": "CN",
-      "elev": 2104,
-      "rwy": 4500,
-      "score": 110.6,
-      "weather": {
-        "text": "多云",
-        "temp": 11,
-        "cloud": 72,
-        "vis": 29600,
-        "wind": 14,
-        "isDay": true,
-        "code": 2
-      },
-      "photo": "images/airports/ZPPP.jpg"
-    },
-    {
-      "icao": "CYQT",
+      "icao": "ESNS",
       "role": "scenic",
-      "name": "Thunder Bay International Airport",
-      "city": "Thunder Bay",
-      "country": "CA",
-      "elev": 199,
-      "rwy": 2231,
-      "score": 98.4,
+      "name": "Skellefteå Airport",
+      "city": "Skellefteå",
+      "country": "SE",
+      "elev": 48,
+      "rwy": 2520,
+      "score": 93,
       "weather": {
         "text": "晴",
-        "temp": -11,
-        "cloud": 0,
-        "vis": 16400,
+        "temp": -8,
+        "cloud": 2,
+        "vis": 22320,
         "wind": 7,
         "isDay": false,
         "code": 0
       },
-      "photo": "images/picks/2026-11-25/CYQT.jpg"
+      "photo": "images/picks/2026-11-26/ESNS.jpg"
     }
   ],
   "history": [
-    "VHHH",
-    "NZQN",
-    "CYVP",
     "ZGGG",
     "CYRV",
     "PAJN",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYFB",
     "OTHH",
     "ZPPP",
-    "CYQT"
+    "CYQT",
+    "KDFW",
+    "ZULS",
+    "ESNS"
   ]
 };
