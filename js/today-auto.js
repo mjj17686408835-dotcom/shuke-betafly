@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-26",
-  "generated": "2026-11-26T03:49:51.958Z",
-  "icao": "KDFW",
+  "date": "2026-11-27",
+  "generated": "2026-11-27T03:51:39.847Z",
+  "icao": "RPVM",
   "picks": [
     {
-      "icao": "KDFW",
+      "icao": "RPVM",
       "role": "hub",
-      "name": "Dallas Fort Worth International Airport",
-      "city": "Dallas-Fort Worth",
-      "country": "US",
-      "elev": 185,
-      "rwy": 4085,
-      "score": 105.8,
+      "name": "Mactan Cebu International Airport",
+      "city": "Cebu City/Lapu-Lapu City",
+      "country": "PH",
+      "elev": 9,
+      "rwy": 3310,
+      "score": 123,
       "weather": {
         "text": "晴",
-        "temp": 5,
+        "temp": 31,
         "cloud": 0,
-        "vis": 38700,
-        "wind": 12,
-        "isDay": false,
-        "code": 0
-      },
-      "photo": "images/picks/2026-11-26/KDFW.jpg"
-    },
-    {
-      "icao": "ZULS",
-      "role": "challenge",
-      "name": "Lhasa Gonggar International Airport",
-      "city": "Shannan (Gonggar)",
-      "country": "CN",
-      "elev": 3570,
-      "rwy": 4000,
-      "score": 88.9,
-      "weather": {
-        "text": "晴",
-        "temp": 6,
-        "cloud": 0,
-        "vis": 49360,
-        "wind": 3,
+        "vis": 44740,
+        "wind": 10,
         "isDay": true,
         "code": 0
       },
-      "photo": "images/airports/ZULS.jpg"
+      "photo": "images/picks/2026-11-27/RPVM.jpg"
     },
     {
-      "icao": "ESNS",
-      "role": "scenic",
-      "name": "Skellefteå Airport",
-      "city": "Skellefteå",
-      "country": "SE",
-      "elev": 48,
-      "rwy": 2520,
-      "score": 93,
+      "icao": "NZQN",
+      "role": "challenge",
+      "name": "Queenstown Airport",
+      "city": "Queenstown",
+      "country": "NZ",
+      "elev": 357,
+      "rwy": 1891,
+      "score": 122.7,
       "weather": {
         "text": "晴",
-        "temp": -8,
-        "cloud": 2,
-        "vis": 22320,
-        "wind": 7,
-        "isDay": false,
+        "temp": 19,
+        "cloud": 0,
+        "vis": 61020,
+        "wind": 10,
+        "isDay": true,
         "code": 0
       },
-      "photo": "images/picks/2026-11-26/ESNS.jpg"
+      "photo": "images/airports/NZQN.jpg"
+    },
+    {
+      "icao": "CYXY",
+      "role": "scenic",
+      "name": "Whitehorse / Erik Nielsen International Airport",
+      "city": "Whitehorse",
+      "country": "CA",
+      "elev": 706,
+      "rwy": 2895,
+      "score": 53.4,
+      "weather": {
+        "text": "阴",
+        "temp": -6,
+        "cloud": 90,
+        "vis": 24460,
+        "wind": 2,
+        "isDay": false,
+        "code": 3
+      },
+      "photo": "images/picks/2026-11-27/CYXY.jpg"
     }
   ],
   "history": [
-    "ZGGG",
-    "CYRV",
-    "PAJN",
     "KORD",
     "ZULS",
     "CYDF",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "CYQT",
     "KDFW",
     "ZULS",
-    "ESNS"
+    "ESNS",
+    "RPVM",
+    "NZQN",
+    "CYXY"
   ]
 };
