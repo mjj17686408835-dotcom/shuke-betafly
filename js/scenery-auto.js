@@ -1,7 +1,142 @@
 /* 由 scripts/fetch-scenery.mjs 自动生成，请勿手改。
-   抓取时间：2026-11-27T03:54:50.238Z
-   条目数：88 */
+   抓取时间：2026-11-28T03:41:48.527Z
+   条目数：87 */
 const SCENERY_AUTO = [
+  {
+    "airport": "KMIA",
+    "title": "Glideslope Pro – KMIA Miami International Airport",
+    "author": "Glideslope Pro",
+    "version": "v2.3.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/12e0239c28a9bc3faabaf779d67387d43997500d.jpg",
+    "url": "https://sceneryaddons.org/glideslope-pro-kmia-miami-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "KLAS",
+    "title": "Glideslope Pro – Las Vegas City & KLAS McCarran / Harry Reid International Airport",
+    "author": "Glideslope Pro",
+    "version": "v1.5.6",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/11/4ef7557f7cf022425f823759db51c6a5927cfe2d.jpg",
+    "url": "https://sceneryaddons.org/glideslope-pro-las-vegas-city-klas-mccarran-harry-reid-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "VYMD",
+    "title": "SiamFlight – VYMD Mandalay International Airport",
+    "author": "SiamFlight",
+    "version": "v1.1.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/10/9b733f77e111fe71989cb7281cefbbed554cfe2f.jpg",
+    "url": "https://sceneryaddons.org/siamflight-vymd-mandalay-international-airport/"
+  },
+  {
+    "airport": "VTCI",
+    "title": "SiamFlight – VTCI Pai / Mae Hong Son Airport",
+    "author": "SiamFlight",
+    "version": "v1.1.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/c6a25af8cca15dc2b8bec2b3f96ff805468c2843.jpg",
+    "url": "https://sceneryaddons.org/siamflight-vtci-pai-mae-hong-son-airport/"
+  },
+  {
+    "airport": "VTBU",
+    "title": "SiamFlight – VTBU U–Tapao International Airport",
+    "author": "SiamFlight",
+    "version": "v1.1.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/09/8dca6c37fe2a2d1a4e26faabcf51935ec6c774d6.jpg",
+    "url": "https://sceneryaddons.org/siamflight-vtbu-u-tapao-international-airport/"
+  },
+  {
+    "airport": "LHBP",
+    "title": "SoFly – LHBP Budapest Ferenc Liszt International Airport",
+    "author": "SoFly",
+    "version": "v1.1.1",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/06/99dabdd1e0a90811a3708ea009c5d9f855defc87.jpg",
+    "url": "https://sceneryaddons.org/sofly-lhbp-budapest-ferenc-liszt-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "LIPZ",
+    "title": "Aerosoft – LIPZ Venice Marco Polo Airport",
+    "author": "Aerosoft",
+    "version": "v1.0.1",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/d99a63070269ea8ca7cb868a97f9e158df854dbd.jpg",
+    "url": "https://sceneryaddons.org/aerosoft-lipz-venice-marco-polo-airport-msfs-2024/"
+  },
+  {
+    "airport": "MFSG",
+    "title": "MFSG – VYYY Yangon International Airport",
+    "author": "MFSG",
+    "version": "v1.0.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/51b96a8db8b5c3f79a22e8a2b375bb0567f7c938.jpg",
+    "url": "https://sceneryaddons.org/mfsg-vyyy-yangon-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "",
+    "title": "WF Scenery Studio – Jetway Tools",
+    "author": "WF Scenery Studio",
+    "version": "v1.0.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/3e3b01f906a26e1fb1926f8b3e88bd46f3b70bff.jpg",
+    "url": "https://sceneryaddons.org/wf-scenery-studio-jetway-tools-msfs-2024/"
+  },
+  {
+    "airport": "",
+    "title": "MK–STUDIOS – Airport Tools",
+    "author": "MK–STUDIOS",
+    "version": "v1.0.1",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/05c087090aa678f1de24631b1308de19e26bd49e.jpg",
+    "url": "https://sceneryaddons.org/mk-studios-airport-tools-msfs-2024/"
+  },
+  {
+    "airport": "",
+    "title": "DominicDesignTeam – EFB App",
+    "author": "DominicDesignTeam",
+    "version": "v1.0.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/40dd6c43844f99da5bcd6e8d12e9e89d5030b87d.jpg",
+    "url": "https://sceneryaddons.org/dominicdesignteam-efb-app-msfs-2024/"
+  },
+  {
+    "airport": "VVTS",
+    "title": "DominicDesignTeam – VVTS Tan Son Nhat International Airport",
+    "author": "DominicDesignTeam",
+    "version": "v2.0.5",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/eedf6882b6c9d14f17931f1f52291063a82c4445.jpg",
+    "url": "https://sceneryaddons.org/dominicdesignteam-vvts-tan-son-nhat-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "EGPC",
+    "title": "UK2000 Scenery – EGPC Wick John O&#8217; Groats Airport",
+    "author": "UK2000 Scenery",
+    "version": "v1.0.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/fe496e836aa0ba3229efae45bf2149a2a9f03291.jpg",
+    "url": "https://sceneryaddons.org/uk2000-scenery-egpc-wick-john-o-groats-airport/"
+  },
+  {
+    "airport": "KGRR",
+    "title": "TaiModels – KGRR Grand Rapids Gerald R. Ford International Airport",
+    "author": "TaiModels",
+    "version": "v1.1.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/397fcb71387fdeb8e904f4ec2294113b41ab5d4d.jpg",
+    "url": "https://sceneryaddons.org/taimodels-kgrr-grand-rapids-gerald-r-ford-international-airport-msfs-2024/"
+  },
+  {
+    "airport": "LOWW",
+    "title": "Gaya Simulations – LOWW Vienna International Airport",
+    "author": "Gaya Simulations",
+    "version": "v1.0.0",
+    "date": "2026-11-28",
+    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/2cb1f58962033deeb4ba0e07d4eac0e3f6a01f84.jpg",
+    "url": "https://sceneryaddons.org/gaya-simulations-loww-vienna-international-airport-msfs-2024/"
+  },
   {
     "airport": "ZSSS",
     "title": "WF Scenery Studio – ZSSS Shanghai Hongqiao International Airport",
@@ -19,15 +154,6 @@ const SCENERY_AUTO = [
     "date": "2026-11-22",
     "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/f319a99f5c7a1a6878d5494aa372b79ac99576be.jpg",
     "url": "https://sceneryaddons.org/cloudsurf-asia-simulations-wsss-singapore-changi-airport-msfs-2024/"
-  },
-  {
-    "airport": "LIPZ",
-    "title": "Aerosoft – LIPZ Venice Marco Polo Airport",
-    "author": "Aerosoft",
-    "version": "v1.0.0",
-    "date": "2026-11-22",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/d99a63070269ea8ca7cb868a97f9e158df854dbd.jpg",
-    "url": "https://sceneryaddons.org/aerosoft-lipz-venice-marco-polo-airport-msfs-2024/"
   },
   {
     "airport": "KCMR",
@@ -451,141 +577,6 @@ const SCENERY_AUTO = [
     "date": "2026-11-05",
     "thumb": "https://sceneryaddons.org/wp-content/uploads/2026/11/6ddc7cc67c25a2658b5f362db14ddde6a88d8b4b.jpg",
     "url": "https://sceneryaddons.org/inibuilds-kmsy-louis-armstrong-new-orleans-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "LFVP",
-    "title": "Simaddons – LFVP Saint–Pierre Pointe–Blanche Airport v1.0.1 (Update 2)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/02/fdceed658a7b2264bc130b95b266ea70f4cc60d0.jpg",
-    "url": "https://sceneryaddons.org/simaddons-lfvp-saint-pierre-pointe-blanche-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYYT",
-    "title": "Simaddons – CYYT St. John&#8217;s International Airport v1.0.1 (Update 3)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/81da7d28d0d6918d88cc438166457ee891e59b32.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyyt-st-john-s-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYYC",
-    "title": "Simaddons – CYYC Calgary International Airport v1.0.1 (Update 2)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/2a98046e7ebbf3ffc01dadecbdd53fc7c420839e.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyyc-calgary-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYXT",
-    "title": "Simaddons – CYXT Terrace–Kitimat Airport & CZB2 Bell II Lodge Heliport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/02/7e62cfe53767c27094c72d86eac8db2dfde6cdf2.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyxt-terrace-kitimat-airport-czb2-bell-ii-lodge-heliport-msfs-2024/"
-  },
-  {
-    "airport": "CYXS",
-    "title": "Simaddons – CYXS Prince George Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/02/7b34002539982c302dcaa2903ae9cd0ebaa69569.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyxs-prince-george-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYXC",
-    "title": "Simaddons – CYXC Cranbrook / Canadian Rockies International Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/01/f4b3c9eda99829cae0a1053e34e736740e9777f9.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyxc-cranbrook-canadian-rockies-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYVP",
-    "title": "Simaddons – CYVP Kuujjuaq Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/01/a1354df4f9060b563faa54927a222b9e765bc974.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyvp-kuujjuaq-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYSJ",
-    "title": "Simaddons – CYSJ St. John Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/5437af961eb11ceb750587b7c1c9454ea0b655cd.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cysj-st-john-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYRV",
-    "title": "Simaddons – CYRV Revelstoke Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/01/deb472cdb577f609812345268dc1a099c26d4be9.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyrv-revelstoke-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYRO",
-    "title": "Simaddons – CYRO Ottawa/Rockcliffe Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/01/47ba1cdd6ef6e9c11ea2507393bf7c57b379601b.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyro-ottawa-rockcliffe-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYQX",
-    "title": "Simaddons – CYQX Gander International Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/0c41dcf8741b5ce99c109da267d796bb924d28c6.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyqx-gander-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYQU",
-    "title": "Simaddons – CYQU Grande Prairie Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/02/8c0402a236097083895caf9507fd019329f8de48.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyqu-grande-prairie-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYQT",
-    "title": "Simaddons – CYQT Thunder Bay International Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/32cc4666d4be08d96c1ea49f7a608746b85b671e.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyqt-thunder-bay-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYQR",
-    "title": "Simaddons – CYQR Regina International Airport v1.0.1 (Updated)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2024/07/4bfc856ebce7cf47c457c6ba1a25d3738ba58716.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyqr-regina-international-airport-msfs-2024/"
-  },
-  {
-    "airport": "CYQQ",
-    "title": "Simaddons – CYQQ Comox Airport v1.0.1 (Update 2)",
-    "author": "Simaddons",
-    "version": "v1.0.1",
-    "date": "2026-11-04",
-    "thumb": "https://sceneryaddons.org/wp-content/uploads/2025/02/9a2a9272af350ca324e0d4b688ce65b8013ed64a.jpg",
-    "url": "https://sceneryaddons.org/simaddons-cyqq-comox-airport-msfs-2024/"
   },
   {
     "airport": "CYQM",
