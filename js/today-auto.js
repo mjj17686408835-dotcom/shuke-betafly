@@ -3,75 +3,72 @@
    字段：date 北京日期 / picks 三个方案（role: hub 好飞 / challenge 挑战 / scenic 风景）
         weather 当时的天气 / history 最近推过的机场 */
 const TODAY_AUTO = {
-  "date": "2026-11-27",
-  "generated": "2026-11-27T03:51:39.847Z",
-  "icao": "RPVM",
+  "date": "2026-11-28",
+  "generated": "2026-11-28T03:37:34.296Z",
+  "icao": "ZGGG",
   "picks": [
     {
-      "icao": "RPVM",
+      "icao": "ZGGG",
       "role": "hub",
-      "name": "Mactan Cebu International Airport",
-      "city": "Cebu City/Lapu-Lapu City",
-      "country": "PH",
-      "elev": 9,
-      "rwy": 3310,
-      "score": 123,
+      "name": "Guangzhou Baiyun International Airport",
+      "city": "Guangzhou (Huadu)",
+      "country": "CN",
+      "elev": 15,
+      "rwy": 3800,
+      "score": 110.3,
       "weather": {
-        "text": "晴",
-        "temp": 31,
-        "cloud": 0,
-        "vis": 44740,
-        "wind": 10,
+        "text": "大部晴朗",
+        "temp": 23,
+        "cloud": 46,
+        "vis": 21500,
+        "wind": 11,
         "isDay": true,
-        "code": 0
+        "code": 1
       },
-      "photo": "images/picks/2026-11-27/RPVM.jpg"
+      "photo": "images/airports/ZGGG.jpg"
     },
     {
-      "icao": "NZQN",
+      "icao": "CYVP",
       "role": "challenge",
-      "name": "Queenstown Airport",
-      "city": "Queenstown",
-      "country": "NZ",
-      "elev": 357,
-      "rwy": 1891,
-      "score": 122.7,
+      "name": "Kuujjuaq Airport",
+      "city": "Kuujjuaq",
+      "country": "CA",
+      "elev": 39,
+      "rwy": 1829,
+      "score": 102.3,
       "weather": {
         "text": "晴",
-        "temp": 19,
+        "temp": -17,
         "cloud": 0,
-        "vis": 61020,
-        "wind": 10,
-        "isDay": true,
+        "vis": 85540,
+        "wind": 8,
+        "isDay": false,
         "code": 0
       },
-      "photo": "images/airports/NZQN.jpg"
+      "photo": "images/picks/2026-11-28/CYVP.jpg"
     },
     {
-      "icao": "CYXY",
+      "icao": "PAJN",
       "role": "scenic",
-      "name": "Whitehorse / Erik Nielsen International Airport",
-      "city": "Whitehorse",
-      "country": "CA",
-      "elev": 706,
-      "rwy": 2895,
-      "score": 53.4,
+      "name": "Juneau International Airport",
+      "city": "Juneau",
+      "country": "US",
+      "elev": 6,
+      "rwy": 2700,
+      "score": 9.5,
       "weather": {
-        "text": "阴",
-        "temp": -6,
-        "cloud": 90,
-        "vis": 24460,
-        "wind": 2,
+        "text": "毛毛雨",
+        "temp": 5,
+        "cloud": 100,
+        "vis": 8880,
+        "wind": 12,
         "isDay": false,
-        "code": 3
+        "code": 51
       },
-      "photo": "images/picks/2026-11-27/CYXY.jpg"
+      "photo": "images/airports/PAJN.jpg"
     }
   ],
   "history": [
-    "KORD",
-    "ZULS",
-    "CYDF",
     "ZWWW",
     "VQPR",
     "EKCH",
@@ -98,6 +95,9 @@ const TODAY_AUTO = {
     "ESNS",
     "RPVM",
     "NZQN",
-    "CYXY"
+    "CYXY",
+    "ZGGG",
+    "CYVP",
+    "PAJN"
   ]
 };
